@@ -1,0 +1,6 @@
+Necesito reemplazar:
+            "dark-bg":"var(--dark-bg)",`n            "background-dark": "#111111",
+
+Por:
+            "dark-bg":"var(--dark-bg)",
+            "background-dark": "#111111",
