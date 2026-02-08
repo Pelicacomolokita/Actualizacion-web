@@ -14,6 +14,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.enviodirecto-uy.com/servicios.html" />
   <meta property="og:image" content="https://www.enviodirecto-uy.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -131,35 +135,13 @@
 <body class="bg-white text-neutral-900 antialiased overflow-x-hidden">
 
   <!-- CONFIG LINKS -->
-  <script>
-    const WHATSAPP_PHONE = "59897428015";
-    const PRECIOS_LINK = "precios-y-zonas.html";
-    const PDF_LINK = "https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing";
-
-    const MSG_NAV = "Hola, vi su página web y quiero empezar a coordinar envíos.";
-    const MSG_BASE = "Hola soy nuevo!, quiero empezar a trabajar con Envío Directo. ¿Podrías pasarme el esquema de datos para coordinar envíos?";
-    const MSG_EMPEZAR = "Hola, vi su página web y quiero empezar a coordinar envíos.";
-    const MSG_URGENTE = "Quiero confirmar un envío URGENTE.";
-    const MSG_COBRO = "Quiero empezar a ofrecer el COBRO AL ENTREGAR en mi tienda, ¿cómo puedo comenzar?";
-    const MSG_CAMBIO = "Quiero coordinar un envío con CAMBIO.";
-    const MSG_VARIOS = "Hola, necesito coordinar el envío de varios paquetes.";
-    const MSG_GRANDE = "Hola, necesito coordinar el envío de un paquete grande, ¿tendrán disponibilidad?";
-    const MSG_PRENDA = "Quiero coordinar un envío con el servicio PRUEBA DE PRENDAS.";
-    const MSG_ENCOMIENDAS = "Necesito coordinar un despacho a ENCOMIENDAS.";
-    const MSG_RETIRO_MERCADERIA = "Necesito coordinar un RETIRO DE MERCADERÍA.";
-
-    function wppUrl(message) {
-      return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
-    }
-  </script>
-
   <!-- NAV -->
 <nav class="sticky top-0 z-50 w-full bg-background-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center gap-3">
           <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-            <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+            <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
           </div>
           <h1 class="text-xl font-bold tracking-tight text-white">Envío Directo</h1>
         </a>
@@ -247,12 +229,7 @@
         <div class="relative rounded-3xl p-3 bg-primary shadow-2xl rotate-1 hover:rotate-0 transition-transform duration-500 shadow-red-900/20">
           <div class="rounded-2xl overflow-hidden bg-white">
             <div class="relative aspect-[21/9] w-full bg-neutral-200">
-              <img
-                src="assets/hero-servicios.webp"
-                alt="Cadetería en Montevideo - Envío Directo"
-                class="absolute inset-0 w-full h-full object-cover"
-                loading="eager"
-              />
+              <img src="assets/hero-servicios.webp" alt="Servicios de mensajería y cadetería en Montevideo: envíos urgentes, cobro al entregar, cambios y pickup point" title="Servicios de cadetería y logística para e-commerce | Envío Directo" class="absolute inset-0 w-full h-full object-cover" width="1400" height="600" loading="eager" />
               <div class="absolute inset-0 bg-black/40"></div>
 
               <div class="absolute bottom-6 left-6 right-6 sm:left-10 sm:right-auto sm:max-w-md text-white">
@@ -627,7 +604,9 @@
 
           <div
             class="relative rounded-3xl overflow-hidden shadow-2xl h-[420px] lg:h-[560px] border border-neutral-200"
-            style="background: url('assets/quote-cadeteria.webp') center/cover;">
+            style="background: url('assets/quote-cadeteria.webp') center/cover;"
+            role="img"
+            aria-label="Equipo de mensajería y cadetería de Envío Directo realizando entregas profesionales en Montevideo para tiendas de e-commerce">
             <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent"></div>
             <div class="absolute bottom-10 left-10 text-white max-w-sm">
               <div class="text-primary mb-4">
@@ -750,7 +729,7 @@
         <div class="flex flex-col gap-6">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-              <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+              <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
             </div>
             <h2 class="text-white text-2xl font-black">Envío Directo</h2>
           </div>
@@ -923,358 +902,64 @@
     </div>
   </div>
 
-  <script>
-    // ─── LINK BINDING ───────────────────────────────────────────
-    function bindLinks() {
-      const setHref = (id, href) => { const el = document.getElementById(id); if (el) el.href = href; };
-
-      // Nav & hero WhatsApp
-      setHref("navWhatsappBtn",      wppUrl(MSG_NAV));
-      setHref("mobileWhatsappBtn",   wppUrl(MSG_NAV));
-      setHref("heroWhatsappBtn",     wppUrl(MSG_EMPEZAR));
-      setHref("introWhatsappBtn",    wppUrl(MSG_EMPEZAR));
-      setHref("ctaWhatsappBtn",      wppUrl(MSG_EMPEZAR));
-      setHref("footerWhatsapp",      wppUrl(MSG_NAV));
-      setHref("floatingWhatsappBtn", wppUrl(MSG_NAV));
-
-      // FAQ CTAs
-      setHref("faqCobro",    wppUrl(MSG_COBRO));
-      setHref("faqUrgente",  wppUrl(MSG_URGENTE));
-
-      // Internal navigation
-      setHref("heroPreciosBtn",    PRECIOS_LINK);
-      setHref("introPreciosBtn",   PRECIOS_LINK);
-      setHref("ctaPreciosBtn",     PRECIOS_LINK);
-      setHref("basePreciosInline", PRECIOS_LINK);
-      setHref("recoPreciosInline", PRECIOS_LINK);
-
-      // PDF (external)
-      setHref("heroPdfBtn", PDF_LINK);
-      setHref("ctaPdfBtn",  PDF_LINK);
+    <script>
+    // WhatsApp Configuration
+    const WHATSAPP_NUMBER = "59898761679";
+    
+    const MSG_GENERAL = "Hola! Quiero coordinar envíos.";
+    const MSG_EMPEZAR = "Hola! Quiero empezar a trabajar con Envío Directo. ¿Me pasás el esquema de datos?";
+    const MSG_CONSULTA = "Hola! Tengo una consulta sobre zonas y precios.";
+    const MSG_COSTO = "Hola! Quiero consultar el costo de un envío.";
+    const MSG_PICKUP = "Hola! Quiero consultar sobre el pickup point.";
+    const MSG_TRANSPARENCIA = "Hola! Quiero más info sobre cómo funcionan los envíos.";
+    
+    function getWhatsAppURL(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
-    bindLinks();
-
-    // ─── MOBILE MENU (toggle + auto-close on link) ─────────────
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu    = document.getElementById("mobileMenu");
-
-    mobileMenuBtn.addEventListener("click", () => {
-      const isHidden = mobileMenu.classList.contains("hidden");
-      mobileMenu.classList.toggle("hidden", !isHidden);
-      mobileMenuBtn.setAttribute("aria-label", isHidden ? "Cerrar menú" : "Abrir menú");
-      mobileMenuBtn.querySelector(".material-symbols-outlined").textContent = isHidden ? "close" : "menu";
-    });
-
-    // Close mobile menu when any nav link is tapped
-    mobileMenu.querySelectorAll("a").forEach(link => {
-      link.addEventListener("click", () => mobileMenu.classList.add("hidden"));
-    });
-
-    // ─── MODAL SYSTEM ───────────────────────────────────────────
-    const MODALS = {
-      "modal-base": {
-        title: "Envío en el día — Condiciones del servicio base",
-        body: `
-          <p><strong>Debe coordinarse</strong> completando el esquema de datos tanto por la web como por WhatsApp.</p>
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Retiro y entrega del paquete dentro del área operativa</li>
-            <li>Gestión completa del recorrido</li>
-          </ul>
-          <p><strong>Medidas máximas:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Hasta 40 × 40 × 20 cm</li>
-            <li>Hasta 3 kg</li>
-          </ul>
-          <p><strong>Protocolo de entrega:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Tocar timbre</li>
-            <li>Llamar al teléfono del destinatario</li>
-            <li>Enviar mensaje (WhatsApp o SMS)</li>
-            <li>Tiempo máximo de espera: <strong>5 minutos</strong></li>
-          </ul>
-          <p><strong>Si no hay respuesta:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Se avisa a coordinación</li>
-            <li>Se contacta al comercio si es necesario</li>
-          </ul>
-          <p><strong>Horarios:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Envíos agendados hasta las 12:00 → entrega en el día</li>
-            <li>Clientes con beneficios: hasta las 15:00 / 16:00 hs (según el beneficio)</li>
-            <li>Si el envío tiene margen menor a 3 horas → se considera urgente</li>
-          </ul>
-          <p><strong>Seguimiento:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Disponible para tiendas con más de 10 envíos</li>
-            <li>Acceso al estado del pedido</li>
-          </ul>
-          <p class="text-sm text-neutral-600"><strong>Atención:</strong> la falta de información sobre el pedido se considerará responsabilidad de la tienda.</p>
-        `,
-        ctas: [
-          { type: "precios", label: "Ver precios y zonas" },
-          { type: "wpp", label: "Hablar con coordinación", message: MSG_BASE }
-        ]
-      },
-      "modal-reco": {
-        title: "Recoordinación sin costo — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>1 reentrega sin costo</li>
-            <li>Se realiza al día siguiente o en fecha acordada</li>
-          </ul>
-          <p><strong>Aplica solo si:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>El destinatario responde a los intentos de contacto</li>
-            <li>Hay un margen mínimo de 4 horas</li>
-            <li>El paquete está correctamente etiquetado</li>
-            <li>El embalaje está cerrado y en condiciones</li>
-            <li>Dirección y datos completos</li>
-            <li>No se solicitó horario estricto (&lt; 2 h)</li>
-          </ul>
-          <p><strong>No aplica si:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>El destinatario no responde</li>
-            <li>Hay error de dirección</li>
-            <li>El paquete no está correctamente rotulado</li>
-            <li>Se solicita horario muy acotado</li>
-          </ul>
-          <p><strong>En estos casos:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Se cobra un nuevo envío</li>
-            <li>O puede retirarse en el punto de pickup</li>
-          </ul>
-        `,
-        ctas: [
-          { type: "precios", label: "Ver precios" },
-          { type: "wpp", label: "Hablar con coordinación", message: "Hola, quiero empezar a trabajar con ustedes!" }
-        ]
-      },
-      "modal-urgente": {
-        title: "Envío urgente — Condiciones",
-        body: `
-          <p><strong>Aplica cuando:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>El envío fue coordinado fuera del horario de agenda</li>
-            <li>El remitente o destinatario tiene disponibilidad menor a 3 horas</li>
-          </ul>
-          <p><strong>Condiciones:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Sujeto a disponibilidad operativa</li>
-            <li>No se realizan entregas en horarios exactos o únicos</li>
-            <li>Tiene recargo adicional</li>
-          </ul>
-        `,
-        ctas: [
-          { type: "wpp", label: "Consultar disponibilidad", message: MSG_URGENTE },
-          { type: "precios", label: "Ver precios" }
-        ]
-      },
-      "modal-cobro": {
-        title: "Cobro del producto — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Cobro en efectivo al destinatario</li>
-            <li>Transferencia al comercio dentro de los 10 días hábiles</li>
-          </ul>
-          <p><strong>Importante:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Si hay costo de envío, debe informarse junto al valor del producto</li>
-            <li>Se recomienda cobrar producto + envío en un solo monto</li>
-          </ul>
-          <p><strong>Modalidad habitual:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Envío con cobro a descontar</li>
-          </ul>
-        `,
-        ctas: [
-          { type: "wpp", label: "Consultar condiciones", message: MSG_COBRO },
-          { type: "precios", label: "Ver precios" }
-        ]
-      },
-      "modal-cambio": {
-        title: "Servicio de cambio — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Entrega del nuevo producto</li>
-            <li>Retiro del producto anterior</li>
-          </ul>
-          <p><strong>Condiciones:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>La devolución vuelve al origen en hasta 7 días hábiles</li>
-            <li>Si se requiere devolución el mismo día → se consideran dos envíos</li>
-          </ul>
-          <p><strong>Importante:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>El paquete debe estar correctamente etiquetado</li>
-            <li>Errores de identificación pueden generar demoras o pérdidas</li>
-          </ul>
-        `,
-        ctas: [
-          { type: "wpp", label: "Consultar condiciones", message: MSG_CAMBIO },
-          { type: "precios", label: "Ver precios" }
-        ]
-      },
-      "modal-paquete": {
-        title: "Paquete extra — Condiciones",
-        body: `
-          <p><strong>Se considera paquete extra cuando:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Se envían dos paquetes o más a una misma dirección en diferentes bultos</li>
-            <li>El total supera 40 × 40 × 20 cm</li>
-          </ul>
-          <p><strong>No se considera extra si:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Son dos paquetes pequeños dentro del límite total</li>
-          </ul>
-          <p><strong>Importante:</strong> si los paquetes van a distintas direcciones → son envíos separados.</p>
-        `,
-        ctas: [
-          { type: "precios", label: "Ver precios" },
-          { type: "wpp", label: "Hablar con coordinación", message: MSG_VARIOS }
-        ]
-      },
-      "modal-tamano": {
-        title: "Tamaño extra — Condiciones",
-        body: `
-          <p><strong>Se considera tamaño extra cuando:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Un paquete supera 40 × 40 × 20 cm hasta 50 × 50 × 50</li>
-            <li>El peso total supera 3 kg hasta 7 kg</li>
-          </ul>
-          <p><strong>Importante:</strong> si supera estas dimensiones/peso, se debe consultar disponibilidad y ajuste de precio.</p>
-        `,
-        ctas: [
-          { type: "precios", label: "Ver precios" },
-          { type: "wpp", label: "Hablar con coordinación", message: MSG_GRANDE }
-        ]
-      },
-      "modal-prendas": {
-        title: "Prueba de prendas — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Hasta 5 minutos de espera sin cargo para prueba</li>
-          </ul>
-          <p><strong>Cobro adicional:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Entre minuto 6 y 8: no se cobra</li>
-            <li>Desde el minuto 9 en adelante: se aplica cargo por cada bloque adicional de 5 minutos</li>
-          </ul>
-          <p><strong>Recomendación:</strong> explicar previamente al cliente cómo funciona el servicio para evitar demoras innecesarias.</p>
-        `,
-        ctas: [
-          { type: "wpp", label: "Consultar condiciones", message: MSG_PRENDA },
-          { type: "precios", label: "Ver precios" }
-        ]
-      },
-      "modal-encomiendas": {
-        title: "Encomiendas — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Despacho o retiro en agencias</li>
-          </ul>
-          <p><strong>Condiciones:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>El paquete debe estar correctamente embalado</li>
-            <li>Debe indicarse la agencia correspondiente</li>
-            <li>Puede requerir documento del remitente o destinatario</li>
-            <li>En caso de tener que abonar el retiro del paquete, se considerará como servicio de cobro</li>
-          </ul>
-          <p><strong>Recomendación:</strong> existen descuentos por cantidad de paquetes.</p>
-        `,
-        ctas: [
-          { type: "wpp", label: "Hablar con coordinación", message: MSG_ENCOMIENDAS }
-        ]
-      },
-      "modal-retiro-mercaderia": {
-        title: "Retiro de mercadería — Condiciones",
-        body: `
-          <p><strong>Incluye:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Hasta 10 minutos de espera para retiro</li>
-          </ul>
-          <p><strong>Si la espera supera los 15 minutos:</strong></p>
-          <ul class="list-disc pl-5 space-y-2">
-            <li>Se aplica recargo adicional</li>
-          </ul>
-          <p><strong>Responsabilidad del cliente:</strong> confirmar que la mercadería esté lista antes del retiro.</p>
-        `,
-        ctas: [
-          { type: "wpp", label: "Hablar con coordinación", message: MSG_RETIRO_MERCADERIA }
-        ]
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const navBtn = document.getElementById("navWhatsappBtn");
+      const mobileBtn = document.getElementById("mobileWhatsappBtn");
+      const floatingBtn = document.getElementById("floatingWhatsappBtn");
+      const footerBtn = document.getElementById("footerWhatsapp");
+      const heroBtn = document.getElementById("heroWhatsappBtn");
+      const ctaBtn = document.getElementById("ctaWhatsappBtn");
+      const ctaFinalBtn = document.getElementById("ctaFinalWhatsappBtn");
+      const ctaEmpezarBtn = document.getElementById("ctaEmpezarWhatsapp");
+      const tranquilidadBtn = document.getElementById("tranquilidadWhatsappBtn");
+      const introBtn = document.getElementById("introWhatsappBtn");
+      const empezarBtn = document.getElementById("empezarWhatsappBtn");
+      const consultarZonaBtn = document.getElementById("consultarZonaWhatsapp");
+      const consultarCostoBtn = document.getElementById("consultarCostoWhatsapp");
+      const pickupBtn = document.getElementById("pickupWhatsappBtn");
+      const transparenciaBtn = document.getElementById("consultarTransparenciaWhatsapp");
+      
+      if (navBtn) navBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (mobileBtn) mobileBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (floatingBtn) floatingBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (footerBtn) footerBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (heroBtn) heroBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaBtn) ctaBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaFinalBtn) ctaFinalBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaEmpezarBtn) ctaEmpezarBtn.href = getWhatsAppURL(MSG_EMPEZAR);
+      if (tranquilidadBtn) tranquilidadBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (introBtn) introBtn.href = getWhatsAppURL(MSG_GENERAL);
+      
+      if (empezarBtn) {
+        empezarBtn.onclick = function() { window.open(getWhatsAppURL(MSG_EMPEZAR), "_blank"); };
       }
-    };
-
-    const overlay    = document.getElementById("modalOverlay");
-    const modalTitle = document.getElementById("modalTitle");
-    const modalBody  = document.getElementById("modalBody");
-    const modalClose = document.getElementById("modalClose");
-    const modalCtas  = document.getElementById("modalCtas");
-
-    function makeBtn({ label, href, variant }) {
-      const a       = document.createElement("a");
-      a.href        = href;
-      a.target      = "_blank";
-      a.rel         = "noopener noreferrer";
-      a.textContent = label;
-      a.className   =
-        variant === "primary"
-          ? "bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-full text-sm font-black transition-all inline-flex items-center justify-center gap-2"
-          : "bg-background-dark hover:bg-black text-white px-6 py-3 rounded-full text-sm font-black transition-all inline-flex items-center justify-center gap-2";
-      return a;
-    }
-
-    function openModal(key) {
-      const data = MODALS[key];
-      if (!data) return;
-
-      modalTitle.textContent = data.title;
-      modalBody.innerHTML    = data.body;
-      modalCtas.innerHTML    = "";
-
-      const built = (data.ctas || []).map((c) => {
-        if (c.type === "precios") return { label: c.label, href: PRECIOS_LINK, type: "precios" };
-        if (c.type === "pdf")     return { label: c.label, href: PDF_LINK,     type: "pdf" };
-        if (c.type === "wpp")     return { label: c.label, href: wppUrl(c.message || MSG_NAV), type: "wpp" };
-        return null;
-      }).filter(Boolean);
-
-      let secondary = built.filter(b => b.type !== "wpp");
-      let primary   = built.filter(b => b.type === "wpp");
-
-      if (primary.length === 0 && built.length > 0) {
-        primary   = [built[0]];
-        secondary = built.slice(1);
+      if (consultarZonaBtn) {
+        consultarZonaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_CONSULTA), "_blank"); };
       }
-
-      secondary.forEach(b => modalCtas.appendChild(makeBtn({ label: b.label, href: b.href, variant: "secondary" })));
-      primary.forEach(b   => modalCtas.appendChild(makeBtn({ label: b.label, href: b.href, variant: "primary"   })));
-
-      overlay.classList.remove("hidden");
-      overlay.classList.add("flex");
-      document.body.style.overflow = "hidden";
-    }
-
-    function closeModal() {
-      overlay.classList.add("hidden");
-      overlay.classList.remove("flex");
-      document.body.style.overflow = "";
-    }
-
-    modalClose.addEventListener("click", closeModal);
-    overlay.addEventListener("click", (e) => { if (e.target === overlay) closeModal(); });
-    window.addEventListener("keydown", (e) => { if (e.key === "Escape" && !overlay.classList.contains("hidden")) closeModal(); });
-
-    document.querySelectorAll("[data-open]").forEach(btn => {
-      btn.addEventListener("click", (e) => {
-        e.preventDefault();
-        openModal(btn.getAttribute("data-open"));
-      });
+      if (consultarCostoBtn) {
+        consultarCostoBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_COSTO), "_blank"); };
+      }
+      if (pickupBtn) {
+        pickupBtn.onclick = function() { window.open(getWhatsAppURL(MSG_PICKUP), "_blank"); };
+      }
+      if (transparenciaBtn) {
+        transparenciaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_TRANSPARENCIA), "_blank"); };
+      }
     });
   </script>
 

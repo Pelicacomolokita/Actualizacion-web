@@ -15,6 +15,10 @@
   <meta property="og:url" content="https://www.enviodirecto-uy.com/preguntas-frecuentes.html" />
   <meta property="og:type" content="website" />
   <meta property="og:image" content="https://www.enviodirecto-uy.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo" />
   
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary" />
@@ -39,174 +43,13 @@
 
   <!-- Tailwind CSS -->
   <script src="https://cdn.tailwindcss.com"></script>
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            'primary': '#dc2626',
-            'dark-bg': '#0a0a0a',
-            'background-dark': '#0f0f0f',
-            'background-light': '#fafafa',
-          },
-          fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-          },
-        }
-      }
-    }
-  </script>
-
-  <style>
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-  </style>
-
-  <!-- LocalBusiness Schema -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "LocalBusiness",
-    "name": "Envío Directo - Cadetería Montevideo",
-    "image": "https://www.enviodirecto-uy.com/assets/logo-envio-directo.webp",
-    "@id": "https://www.enviodirecto-uy.com/",
-    "address": {
-      "@type": "PostalAddress",
-      "streetAddress": "Montevideo",
-      "addressLocality": "Montevideo",
-      "postalCode": "11000",
-      "addressCountry": "UY"
-    },
-    "telephone": "+59897428015",
-    "url": "https://www.enviodirecto-uy.com/",
-    "description": "Cadetería para tiendas online en Montevideo. Entregas en el día, coordinación y servicios extra.",
-    "areaServed": "Montevideo, Uruguay",
-    "sameAs": [
-      "https://www.google.com/maps/place/Env%C3%ADo+directo+Cadeteria/@-34.8931041,-56.1845334,17z",
-      "https://www.instagram.com/envio_directo_cadeteria_mvd/",
-      "https://www.youtube.com/@SrLunes_santiagofigueredo"
-    ]
-  }
-  </script>
-
-  <!-- FAQ Schema - TODAS LAS PREGUNTAS -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "¿Qué servicios pueden generar cargos adicionales?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Algunos servicios pueden generar cargos extra según las características del envío o las necesidades de coordinación. Entre ellos se incluyen: envíos urgentes, servicio de cobro de producto, cambios de productos, prueba de prendas, tamaño extra del paquete, envíos realizados los sábados, envío de múltiples paquetes hacia una misma dirección, retiro en proveedores y encomiendas o despachos en agencias. El retiro en proveedores puede generar recargo cuando el cadete debe realizar filas, esperar turnos de atención o enfrentar demoras para retirar el paquete. Las encomiendas o despachos en agencias se consideran un tipo de servicio específico y cuentan con condiciones y tarifas propias."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Con cuánto tiempo debo coordinar un envío?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El tiempo para coordinar un envío depende del tipo de coordinación solicitada y del tipo de cliente. Los envíos pueden coordinarse de dos formas: Envíos agendados se coordinan dentro del horario de agenda disponible según el tipo de cliente, generalmente hasta las 12:00 hs. Se recomienda contar con un margen mínimo de 3 horas tanto para el retiro como para la entrega. Envíos urgentes pueden coordinarse hasta las 17:00 hs, sujetos a disponibilidad operativa."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Los horarios de retiro y entrega son obligatorios?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No son obligatorios, pero se recomienda indicarlos para optimizar la coordinación logística. Cuando no se indica horario, el envío se considera con disponibilidad abierta dentro del horario operativo del servicio. Si el margen horario es menor a 3 horas, el envío será considerado urgente."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Los envíos tienen seguimiento en tiempo real?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El seguimiento del estado del envío está disponible para clientes con modalidad mensual o clientes con volumen recurrente de trabajo (más de 10 envíos realizados con el servicio) que lo soliciten previamente. El seguimiento consiste en información sobre el estado del envío y confirmación manual del servicio una vez finalizado. Actualmente, el servicio no cuenta con rastreo de ubicación en tiempo real ni notificaciones automáticas durante el recorrido."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué condiciones debe cumplir el paquete?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Para garantizar una entrega segura, el paquete debe cumplir con ciertas condiciones mínimas. Debe estar cerrado, protegido internamente, seco y correctamente etiquetado con datos del destinatario. Los productos frágiles deben contar con embalaje adecuado. Roturas por embalaje deficiente no serán cubiertas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Ofrecen servicio de cobro contra entrega?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Sí. El servicio permite recaudar el monto indicado en efectivo al momento de la entrega. El dinero se transfiere al comercio dentro de un plazo máximo de 10 días hábiles."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué sucede si el destinatario no responde o no se encuentra en el domicilio?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "El cadete realizará protocolo de contacto mediante timbre, llamadas y mensajes. Si no se logra contacto, el envío puede pasar a recoordinación. Cuando se cumple el protocolo, el envío se considera realizado."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué pasa si un paquete se pierde o se daña?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "En caso de pérdida total o daño irreversible atribuible al servicio, se podrá realizar reintegro de hasta $2.000 calculado sobre precio de compra. Exclusiones incluyen robos, siniestros, embalaje deficiente, datos incorrectos o autorizaciones para dejar paquetes sin supervisión. Reclamos deben realizarse dentro de 24 horas."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué sucede con los envíos en caso de mal clima o situaciones de seguridad?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Cuando INUMET emite alertas naranja o roja, el servicio se suspende. Los envíos se reprograman. En urgencias, el cliente puede retirar el paquete desde pickup según horario."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Qué sucede con los paquetes pendientes en pickup?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Los paquetes pueden almacenarse sin costo. Si no son reclamados en 6 meses, se consideran abandonados y serán descartados."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "¿Cómo se realizan los reclamos?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Los reclamos deben realizarse por WhatsApp. Tiempo máximo de respuesta formal: 72 horas hábiles. Reclamos fuera de plazo pueden evaluarse sin derecho a reclamo ante negativa."
-        }
-      }
-    ]
-  }
-  </script>
-</head>
-
-<body class="bg-white text-neutral-900 antialiased overflow-x-hidden">
-
-  <!-- CONFIG LINKS -->
-  <script>
-    const WHATSAPP_PHONE = "59897428015";
-    const PDF_LINK = "https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing";
-
-    const MSG_NAV = "Hola, vi su página web y quiero empezar a coordinar envíos.";
-    const MSG_EMPEZAR = "Hola! Vi la página de Preguntas Frecuentes y quiero empezar a trabajar con Envío Directo. ¿Cómo arrancamos?";
-
-    function wppUrl(msg) { return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(msg)}`; }
-  </script>
-
   <!-- NAV -->
   <nav class="sticky top-0 z-50 w-full bg-background-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center gap-3">
           <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-            <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+            <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
           </div>
           <h1 class="text-xl font-bold tracking-tight text-white">Envío Directo</h1>
         </a>
@@ -575,7 +418,7 @@
         <div class="flex flex-col gap-6">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-              <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+              <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
             </div>
             <h2 class="text-white text-2xl font-black">Envío Directo</h2>
           </div>
@@ -726,50 +569,66 @@
   </div>
 
   <!-- SCRIPTS -->
-  <script>
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById('mobileMenuBtn');
-    const mobileMenu = document.getElementById('mobileMenu');
+    <script>
+    // WhatsApp Configuration
+    const WHATSAPP_NUMBER = "59898761679";
     
-    mobileMenuBtn?.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-    });
-
-    // Auto-close mobile menu on link click
-    mobileMenu?.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
-      });
-    });
-
-    // Bind WhatsApp links
-    function bindLinks() {
-      const setHref = (id, href) => { 
-        const el = document.getElementById(id); 
-        if (el) el.href = href; 
-      };
-
-      setHref("navWhatsappBtn", wppUrl(MSG_NAV));
-      setHref("mobileWhatsappBtn", wppUrl(MSG_NAV));
-      setHref("ctaEmpezarWhatsapp", wppUrl(MSG_EMPEZAR));
-      setHref("footerWhatsapp", wppUrl(MSG_NAV));
-      setHref("floatingWhatsappBtn", wppUrl(MSG_NAV));
+    const MSG_GENERAL = "Hola! Quiero coordinar envíos.";
+    const MSG_EMPEZAR = "Hola! Quiero empezar a trabajar con Envío Directo. ¿Me pasás el esquema de datos?";
+    const MSG_CONSULTA = "Hola! Tengo una consulta sobre zonas y precios.";
+    const MSG_COSTO = "Hola! Quiero consultar el costo de un envío.";
+    const MSG_PICKUP = "Hola! Quiero consultar sobre el pickup point.";
+    const MSG_TRANSPARENCIA = "Hola! Quiero más info sobre cómo funcionan los envíos.";
+    
+    function getWhatsAppURL(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
-    bindLinks();
-
-    // Smooth scroll for anchor links
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function (e) {
-        const href = this.getAttribute('href');
-        if (href !== '#' && href.length > 1) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if (target) {
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-          }
-        }
-      });
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const navBtn = document.getElementById("navWhatsappBtn");
+      const mobileBtn = document.getElementById("mobileWhatsappBtn");
+      const floatingBtn = document.getElementById("floatingWhatsappBtn");
+      const footerBtn = document.getElementById("footerWhatsapp");
+      const heroBtn = document.getElementById("heroWhatsappBtn");
+      const ctaBtn = document.getElementById("ctaWhatsappBtn");
+      const ctaFinalBtn = document.getElementById("ctaFinalWhatsappBtn");
+      const ctaEmpezarBtn = document.getElementById("ctaEmpezarWhatsapp");
+      const tranquilidadBtn = document.getElementById("tranquilidadWhatsappBtn");
+      const introBtn = document.getElementById("introWhatsappBtn");
+      const empezarBtn = document.getElementById("empezarWhatsappBtn");
+      const consultarZonaBtn = document.getElementById("consultarZonaWhatsapp");
+      const consultarCostoBtn = document.getElementById("consultarCostoWhatsapp");
+      const pickupBtn = document.getElementById("pickupWhatsappBtn");
+      const transparenciaBtn = document.getElementById("consultarTransparenciaWhatsapp");
+      
+      if (navBtn) navBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (mobileBtn) mobileBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (floatingBtn) floatingBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (footerBtn) footerBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (heroBtn) heroBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaBtn) ctaBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaFinalBtn) ctaFinalBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaEmpezarBtn) ctaEmpezarBtn.href = getWhatsAppURL(MSG_EMPEZAR);
+      if (tranquilidadBtn) tranquilidadBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (introBtn) introBtn.href = getWhatsAppURL(MSG_GENERAL);
+      
+      if (empezarBtn) {
+        empezarBtn.onclick = function() { window.open(getWhatsAppURL(MSG_EMPEZAR), "_blank"); };
+      }
+      if (consultarZonaBtn) {
+        consultarZonaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_CONSULTA), "_blank"); };
+      }
+      if (consultarCostoBtn) {
+        consultarCostoBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_COSTO), "_blank"); };
+      }
+      if (pickupBtn) {
+        pickupBtn.onclick = function() { window.open(getWhatsAppURL(MSG_PICKUP), "_blank"); };
+      }
+      if (transparenciaBtn) {
+        transparenciaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_TRANSPARENCIA), "_blank"); };
+      }
     });
   </script>
+
 </body>
 </html>

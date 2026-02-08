@@ -14,6 +14,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.enviodirecto-uy.com/coordinar-envio.html" />
   <meta property="og:image" content="https://www.enviodirecto-uy.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -157,7 +161,7 @@
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center gap-3">
           <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-            <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+            <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
           </div>
           <h1 class="text-xl font-bold tracking-tight text-white">Envío Directo</h1>
         </a>
@@ -611,7 +615,7 @@
         <div class="flex flex-col gap-6">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-              <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+              <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
             </div>
             <h2 class="text-white text-2xl font-black">Envío Directo</h2>
           </div>
@@ -760,45 +764,65 @@
     </a>
   </div>
 
-  <script>
+    <script>
     // WhatsApp Configuration
-    const WA_PHONE = "59897428015";
-    const WA_TEXT = "Hola, quiero coordinar un envío";
-    const waUrl = `https://wa.me/${WA_PHONE}?text=${encodeURIComponent(WA_TEXT)}`;
-
-    // Set all WhatsApp links
-    const whatsappButtons = [
-      'navWhatsappBtn',
-      'mobileWhatsappBtn',
-      'heroWhatsappBtn',
-      'tranquilidadWhatsappBtn',
-      'ctaFinalWhatsappBtn',
-      'footerWhatsapp',
-      'floatingWhatsappBtn'
-    ];
-
-    whatsappButtons.forEach(id => {
-      const el = document.getElementById(id);
-      if (el) el.href = waUrl;
-    });
-
-    // Mobile menu toggle with close on link click
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    const WHATSAPP_NUMBER = "59898761679";
     
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      // Close menu when clicking on any link inside
-      const menuLinks = mobileMenu.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
+    const MSG_GENERAL = "Hola! Quiero coordinar envíos.";
+    const MSG_EMPEZAR = "Hola! Quiero empezar a trabajar con Envío Directo. ¿Me pasás el esquema de datos?";
+    const MSG_CONSULTA = "Hola! Tengo una consulta sobre zonas y precios.";
+    const MSG_COSTO = "Hola! Quiero consultar el costo de un envío.";
+    const MSG_PICKUP = "Hola! Quiero consultar sobre el pickup point.";
+    const MSG_TRANSPARENCIA = "Hola! Quiero más info sobre cómo funcionan los envíos.";
+    
+    function getWhatsAppURL(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const navBtn = document.getElementById("navWhatsappBtn");
+      const mobileBtn = document.getElementById("mobileWhatsappBtn");
+      const floatingBtn = document.getElementById("floatingWhatsappBtn");
+      const footerBtn = document.getElementById("footerWhatsapp");
+      const heroBtn = document.getElementById("heroWhatsappBtn");
+      const ctaBtn = document.getElementById("ctaWhatsappBtn");
+      const ctaFinalBtn = document.getElementById("ctaFinalWhatsappBtn");
+      const ctaEmpezarBtn = document.getElementById("ctaEmpezarWhatsapp");
+      const tranquilidadBtn = document.getElementById("tranquilidadWhatsappBtn");
+      const introBtn = document.getElementById("introWhatsappBtn");
+      const empezarBtn = document.getElementById("empezarWhatsappBtn");
+      const consultarZonaBtn = document.getElementById("consultarZonaWhatsapp");
+      const consultarCostoBtn = document.getElementById("consultarCostoWhatsapp");
+      const pickupBtn = document.getElementById("pickupWhatsappBtn");
+      const transparenciaBtn = document.getElementById("consultarTransparenciaWhatsapp");
+      
+      if (navBtn) navBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (mobileBtn) mobileBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (floatingBtn) floatingBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (footerBtn) footerBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (heroBtn) heroBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaBtn) ctaBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaFinalBtn) ctaFinalBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaEmpezarBtn) ctaEmpezarBtn.href = getWhatsAppURL(MSG_EMPEZAR);
+      if (tranquilidadBtn) tranquilidadBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (introBtn) introBtn.href = getWhatsAppURL(MSG_GENERAL);
+      
+      if (empezarBtn) {
+        empezarBtn.onclick = function() { window.open(getWhatsAppURL(MSG_EMPEZAR), "_blank"); };
+      }
+      if (consultarZonaBtn) {
+        consultarZonaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_CONSULTA), "_blank"); };
+      }
+      if (consultarCostoBtn) {
+        consultarCostoBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_COSTO), "_blank"); };
+      }
+      if (pickupBtn) {
+        pickupBtn.onclick = function() { window.open(getWhatsAppURL(MSG_PICKUP), "_blank"); };
+      }
+      if (transparenciaBtn) {
+        transparenciaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_TRANSPARENCIA), "_blank"); };
+      }
+    });
   </script>
 
 </body>

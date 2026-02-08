@@ -14,6 +14,10 @@
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://www.enviodirecto-uy.com/precios-y-zonas.html" />
   <meta property="og:image" content="https://www.enviodirecto-uy.com/assets/og-image.webp" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:image:type" content="image/webp" />
+  <meta property="og:image:alt" content="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo" />
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image" />
@@ -112,33 +116,13 @@
 <body class="bg-base text-gray-100 transition-colors duration-300 selection:bg-primary selection:text-white">
 
   <!-- CONFIG LINKS -->
-  <script>
-    const WHATSAPP_PHONE = "59897428015";
-    const HOME_LINK = "index.html";
-    const SERVICIOS_LINK = "servicios.html";
-    const COORDINAR_LINK = "coordinar-envio.html";
-    const PRECIOS_LINK = "precios-y-zonas.html";
-    const PDF_LINK = "https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing";
-    const ZONAS_MAP_LINK = "https://www.google.com/maps/d/";
-
-    const MSG_NAV = "Hola, vi su página web y quiero consultar precios/zona.";
-    const MSG_COSTO = "Hola, tengo un envío y quiero confirmar el costo exacto.";
-    const MSG_ZONA = "Hola, ¿me confirmás qué zona corresponde a esta dirección?";
-    const MSG_EMPEZAR = "Hola soy nuevo! Quiero empezar a coordinar envíos. ¿Me pasás el esquema de datos?";
-    const MSG_PICKUP = "Hola, quiero consultar la modalidad de pickup (dejar paquetes en su punto).";
-
-    function wppUrl(message) {
-      return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
-    }
-  </script>
-
   <!-- NAV -->
   <nav class="sticky top-0 z-50 w-full bg-background-dark">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center h-20">
         <a href="index.html" class="flex items-center gap-3">
           <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-            <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+            <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
           </div>
           <h1 class="text-xl font-bold tracking-tight text-white">Envío Directo</h1>
         </a>
@@ -237,8 +221,12 @@
           <div class="absolute inset-0 bg-primary/20 mix-blend-overlay z-10"></div>
           <div class="absolute inset-0 bg-gradient-to-t from-base via-transparent to-transparent opacity-80 z-10"></div>
           <img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-               src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZsa3-Pb04g3CeaVHN3YRBvaqeY6_QL9BzCYH8H4JBzL6A7MM3eviDKzJReGwpFi8N2S_6LiJHxiTyGmwr81kJxlSB8ss2MUmR8Ec0LUslgPVRvP1zlycIPtxeA3p-c-9tblvT9hDufLEIBR2x8U-Tp1IxU69cK0cJchvXd8nhcDOirnBK9SfLpNfiSNT7IhLKc_1ZONhBxHwOiZo2kDerpfv0m7jmePYWrdcgVoprFdZ8GKU0DSTkDVC5WW86vY0eQPyMc4DgXTxm"
-               alt="Logística y entregas en Montevideo"/>
+               src="assets/hero-precios.webp"
+               alt="Mapa de zonas de envío en Montevideo - Tarifas de cadetería por zona 1, 2, 3 y 4"
+               title="Zonas y precios de envío Montevideo | Cadetería barrio a barrio"
+               width="1000"
+               height="563"
+               loading="eager" />
         </div>
       </div>
     </section>
@@ -804,7 +792,7 @@
         <div class="flex flex-col gap-6">
           <div class="flex items-center gap-3">
             <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
-              <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" loading="eager" fetchpriority="high" />
+              <img src="assets/logo-envio-directo.webp" alt="Envío Directo - Cadetería y mensajería para e-commerce en Montevideo Uruguay" title="Envío Directo | Servicio de cadetería profesional para tiendas online" class="w-full h-full object-cover" width="200" height="200" loading="eager" fetchpriority="high" />
             </div>
             <h5 class="text-white text-2xl font-black">Envío Directo</h5>
           </div>
@@ -995,276 +983,65 @@
     </div>
   </div>
 
-  <script>
-    // Datos de barrios por zona
-    const barrios = {
-      1: ['Abayuba', 'Aguada', 'Aires Puros', 'Arroyo Seco', 'Atahualpa', 'Bella Vista', 'Brazo Oriental', 'Buceo', 'Capurro', 'Cerrito', 'Centro', 'Cordón', 'Ellauri', 'Jacinto Vera', 'Juanico', 'La Blanqueada', 'La Comercial', 'Mercado Modelo', 'Palermo', 'Parque Batlle', 'Parque Rodó', 'Pérez Castellanos', 'Pocitos', 'Prado (antes del arroyo miguelete)', 'Punta Carretas', 'Reducto', 'Tres Cruces', 'Trouville', 'Unión', 'Villa Española', 'Villa Muñoz', 'Barrio Sur', 'Ciudad Vieja', 'Goes'],
-      2: ['Belvedere', 'Casavalle', 'Cerro Sur', 'Curva de Maroñas', 'Flor de Maroñas', 'Ituzaingó', 'Jardines del Hipódromo', 'La Teja', 'Las Acacias', 'Malvín', 'Malvín Norte', 'Maroñas', 'Paso de las Duranas', 'Paso Molino', 'Peñarol', 'Piedras Blancas', 'Punta Gorda', 'Sayago'],
-      3: ['Bañados de Carrasco', 'Barra de Carrasco', 'Carrasco', 'Carrasco Norte', 'Cerro Norte', 'Colón', 'Conciliación', 'La Cruz de Carrasco', 'Lezica', 'Manga', 'Paso Carrasco', 'Paso de la Arena (hasta antes los bulevares)', 'Punta de Rieles', 'Verdisol'],
-      4: ['Abayuba', 'Bañados de Carrasco', 'Barra de Carrasco', 'Casabo', 'Casarino', 'Ciudad de la Costa', 'La Paz', 'Las Piedras', 'Melilla', 'Pajas Blancas', 'Paso de la Arena (después los bulevares)', 'Santa Catalina', 'Santiago Vázquez', 'Toledo Chico', 'Villa Gracia']
-    };
-
-    const zoneConfig = {
-      1: { name: "Zona 1", price: 160 },
-      2: { name: "Zona 2", price: 200 },
-      3: { name: "Zona 3", price: 240 },
-      4: { name: "Zona 4", price: 350 }
-    };
-
-    const barrioToZone = {};
-    Object.entries(barrios).forEach(([zone, barrioList]) => {
-      barrioList.forEach(barrio => {
-        barrioToZone[barrio.toLowerCase()] = parseInt(zone);
-      });
-    });
-
-    const pickupInput = document.getElementById('pickupBarrio');
-    const deliveryInput = document.getElementById('deliveryBarrio');
-    const pickupList = document.getElementById('pickupList');
-    const deliveryList = document.getElementById('deliveryList');
-    const serviceCheckboxes = document.querySelectorAll('.service-extra');
-    const totalPriceDisplay = document.getElementById('totalPrice');
-    const totalPriceDetail = document.getElementById('totalPriceDetail');
-    const basePriceDisplay = document.getElementById('basePrice');
-    const extrasPriceDisplay = document.getElementById('extrasPrice');
-    const zoneDisplay = document.getElementById('zoneDisplay');
-    const zoneLabel = document.getElementById('zoneLabel');
-    const zoneModal = document.getElementById('zoneModal');
-    const closeZoneModal = document.getElementById('closeZoneModal');
-    const closeZoneModalBtn = document.getElementById('closeZoneModalBtn');
-    const zoneCards = document.querySelectorAll('.zone-card');
-
-    zoneCards.forEach(card => {
-      card.addEventListener('click', () => {
-        const zoneNum = card.dataset.zone;
-        const zoneName = zoneConfig[zoneNum].name;
-        const zonePrice = zoneConfig[zoneNum].price;
-        const barriosList = barrios[zoneNum];
-
-        document.getElementById('modalZoneName').textContent = zoneName;
-        document.getElementById('modalZonePrice').textContent = `$${zonePrice}`;
-
-        const barriosHtml = barriosList.map(barrio =>
-          `<div class="bg-base px-4 py-3 rounded-lg text-gray-300 text-sm border border-border-dark">${barrio}</div>`
-        ).join('');
-        document.getElementById('modalZoneBarrios').innerHTML = barriosHtml;
-
-        zoneModal.classList.remove('hidden');
-      });
-    });
-
-    closeZoneModal.addEventListener('click', () => zoneModal.classList.add('hidden'));
-    closeZoneModalBtn.addEventListener('click', () => zoneModal.classList.add('hidden'));
-    zoneModal.addEventListener('click', (e) => {
-      if (e.target === zoneModal) zoneModal.classList.add('hidden');
-    });
-
-    function showSuggestions(input, listEl) {
-      const query = input.value.toLowerCase().trim();
-
-      if (!query) {
-        listEl.classList.add('hidden');
-        return;
-      }
-
-      const allBarrios = Object.values(barrios).flat();
-      const filtered = allBarrios.filter(b => b.toLowerCase().includes(query));
-
-      if (filtered.length === 0) {
-        listEl.classList.add('hidden');
-        return;
-      }
-
-      listEl.innerHTML = filtered.map(barrio => `
-        <div class="px-4 py-3 hover:bg-surface-alt cursor-pointer text-gray-200 border-b border-border-dark last:border-b-0 text-sm" data-barrio="${barrio}">
-          ${barrio}
-        </div>
-      `).join('');
-
-      listEl.classList.remove('hidden');
-
-      listEl.querySelectorAll('[data-barrio]').forEach(el => {
-        el.addEventListener('click', () => {
-          input.value = el.textContent.trim();
-          listEl.classList.add('hidden');
-          calculatePrice();
-        });
-      });
-    }
-
-    pickupInput.addEventListener('input', () => showSuggestions(pickupInput, pickupList));
-    deliveryInput.addEventListener('input', () => showSuggestions(deliveryInput, deliveryList));
-
-    document.addEventListener('click', (e) => {
-      if (!e.target.closest('#pickupBarrio') && !e.target.closest('#pickupList')) {
-        pickupList.classList.add('hidden');
-      }
-      if (!e.target.closest('#deliveryBarrio') && !e.target.closest('#deliveryList')) {
-        deliveryList.classList.add('hidden');
-      }
-    });
-
-    const formZona = document.getElementById('formZona');
-    const formBarrio = document.getElementById('formBarrio');
-    const pickupZonaSelect = document.getElementById('pickupZona');
-    const deliveryZonaSelect = document.getElementById('deliveryZona');
-    const searchTypeButtons = document.querySelectorAll('.search-type-btn');
-
-    let currentSearchType = 'zona';
-
-    searchTypeButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        const type = btn.dataset.type;
-        if (type === 'direccion') return;
-
-        currentSearchType = type;
-
-        searchTypeButtons.forEach(b => {
-          if (b.dataset.type === type) {
-            b.classList.remove('text-gray-400', 'hover:text-white');
-            b.classList.add('bg-primary', 'text-white');
-          } else if (b.dataset.type !== 'direccion') {
-            b.classList.add('text-gray-400', 'hover:text-white');
-            b.classList.remove('bg-primary', 'text-white');
-          }
-        });
-
-        if (type === 'zona') {
-          formZona.classList.remove('hidden');
-          formBarrio.classList.add('hidden');
-          pickupInput.value = '';
-          deliveryInput.value = '';
-          pickupList.classList.add('hidden');
-          deliveryList.classList.add('hidden');
-        } else if (type === 'barrio') {
-          formZona.classList.add('hidden');
-          formBarrio.classList.remove('hidden');
-          pickupZonaSelect.value = '';
-          deliveryZonaSelect.value = '';
-        }
-
-        calculatePrice();
-      });
-    });
-
-    pickupZonaSelect.addEventListener('change', calculatePrice);
-    deliveryZonaSelect.addEventListener('change', calculatePrice);
-
-    function calculatePrice() {
-      let maxZone = 0;
-
-      if (currentSearchType === 'zona') {
-        const pickupZone = parseInt(pickupZonaSelect.value) || 0;
-        const deliveryZone = parseInt(deliveryZonaSelect.value) || 0;
-        maxZone = Math.max(pickupZone, deliveryZone);
-      } else {
-        const pickupBarrio = pickupInput.value.toLowerCase().trim();
-        const deliveryBarrio = deliveryInput.value.toLowerCase().trim();
-
-        const pickupZone = barrioToZone[pickupBarrio] || 0;
-        const deliveryZone = barrioToZone[deliveryBarrio] || 0;
-        maxZone = Math.max(pickupZone, deliveryZone);
-      }
-
-      if (maxZone === 0) {
-        totalPriceDisplay.textContent = '$0';
-        totalPriceDetail.textContent = '$0';
-        basePriceDisplay.textContent = '$0';
-        extrasPriceDisplay.textContent = '$0';
-        zoneDisplay.textContent = 'Seleccionar barrio';
-        zoneLabel.textContent = '-';
-        return;
-      }
-
-      const basePrice = zoneConfig[maxZone].price;
-
-      let extrasTotal = 0;
-      serviceCheckboxes.forEach(checkbox => {
-        if (checkbox.checked) extrasTotal += parseInt(checkbox.dataset.price);
-      });
-
-      const totalPrice = basePrice + extrasTotal;
-
-      totalPriceDisplay.textContent = `$${totalPrice}`;
-      totalPriceDetail.textContent = `$${totalPrice}`;
-      basePriceDisplay.textContent = `$${basePrice}`;
-      extrasPriceDisplay.textContent = `$${extrasTotal}`;
-      zoneDisplay.textContent = zoneConfig[maxZone].name;
-      zoneLabel.textContent = zoneConfig[maxZone].name;
-    }
-
-    pickupInput.addEventListener('change', calculatePrice);
-    deliveryInput.addEventListener('change', calculatePrice);
-    serviceCheckboxes.forEach(checkbox => checkbox.addEventListener('change', calculatePrice));
-
-    // WhatsApp button configurations
-    const whatsappButtons = {
-      navWhatsappBtn: MSG_NAV,
-      mobileWhatsappBtn: MSG_NAV,
-      consultarZonaWhatsapp: MSG_ZONA,
-      pickupWhatsappBtn: MSG_PICKUP,
-      consultarTransparenciaWhatsapp: "Hola, tengo dudas sobre los precios y servicios. ¿Podrían explicarme cómo se calcula el costo final?",
-      empezarWhatsappBtn: "Hola, ya entendí zonas, precios y servicios extra. ¿Qué datos necesitás para que empecemos a coordinar envíos?",
-      footerWhatsapp: MSG_NAV,
-      floatingWhatsappBtn: MSG_NAV
-    };
-
-    Object.entries(whatsappButtons).forEach(([id, message]) => {
-      const el = document.getElementById(id);
-      if (el) {
-        el.href = wppUrl(message);
-        if (!el.target) el.target = '_blank';
-        if (!el.rel) el.rel = 'noopener noreferrer';
-        
-        if (id !== 'navWhatsappBtn' && id !== 'mobileWhatsappBtn' && id !== 'floatingWhatsappBtn' && !el.href.startsWith('http')) {
-          el.addEventListener('click', (e) => {
-            e.preventDefault();
-            window.open(wppUrl(message), '_blank');
-          });
-        }
-      }
-    });
-
-    const consultarCostoBtn = document.getElementById('consultarCostoWhatsapp');
-    if (consultarCostoBtn) {
-      consultarCostoBtn.addEventListener('click', () => {
-        const pickup = pickupInput.value || 'No especificado';
-        const delivery = deliveryInput.value || 'No especificado';
-        const basePrice = totalPriceDisplay.textContent;
-
-        let servicios = [];
-        serviceCheckboxes.forEach(checkbox => {
-          if (checkbox.checked) servicios.push(checkbox.parentElement.textContent.trim());
-        });
-
-        let mensaje = `Hola, me gustaría confirmar el costo exacto del envío:\n`;
-        mensaje += `📍 Retiro: ${pickup}\n`;
-        mensaje += `📍 Entrega: ${delivery}\n`;
-        if (servicios.length > 0) mensaje += `📦 Servicios: ${servicios.join(', ')}\n`;
-        mensaje += `💰 Estimación: ${basePrice}`;
-
-        window.open(wppUrl(mensaje), '_blank');
-      });
-    }
-
-    // Mobile menu toggle with close on link click
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
+    <script>
+    // WhatsApp Configuration
+    const WHATSAPP_NUMBER = "59898761679";
     
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        mobileMenu.classList.toggle("hidden");
-      });
-
-      const menuLinks = mobileMenu.querySelectorAll('a');
-      menuLinks.forEach(link => {
-        link.addEventListener('click', () => {
-          mobileMenu.classList.add('hidden');
-        });
-      });
+    const MSG_GENERAL = "Hola! Quiero coordinar envíos.";
+    const MSG_EMPEZAR = "Hola! Quiero empezar a trabajar con Envío Directo. ¿Me pasás el esquema de datos?";
+    const MSG_CONSULTA = "Hola! Tengo una consulta sobre zonas y precios.";
+    const MSG_COSTO = "Hola! Quiero consultar el costo de un envío.";
+    const MSG_PICKUP = "Hola! Quiero consultar sobre el pickup point.";
+    const MSG_TRANSPARENCIA = "Hola! Quiero más info sobre cómo funcionan los envíos.";
+    
+    function getWhatsAppURL(message) {
+      return `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
     }
-
-    calculatePrice();
+    
+    document.addEventListener("DOMContentLoaded", function() {
+      const navBtn = document.getElementById("navWhatsappBtn");
+      const mobileBtn = document.getElementById("mobileWhatsappBtn");
+      const floatingBtn = document.getElementById("floatingWhatsappBtn");
+      const footerBtn = document.getElementById("footerWhatsapp");
+      const heroBtn = document.getElementById("heroWhatsappBtn");
+      const ctaBtn = document.getElementById("ctaWhatsappBtn");
+      const ctaFinalBtn = document.getElementById("ctaFinalWhatsappBtn");
+      const ctaEmpezarBtn = document.getElementById("ctaEmpezarWhatsapp");
+      const tranquilidadBtn = document.getElementById("tranquilidadWhatsappBtn");
+      const introBtn = document.getElementById("introWhatsappBtn");
+      const empezarBtn = document.getElementById("empezarWhatsappBtn");
+      const consultarZonaBtn = document.getElementById("consultarZonaWhatsapp");
+      const consultarCostoBtn = document.getElementById("consultarCostoWhatsapp");
+      const pickupBtn = document.getElementById("pickupWhatsappBtn");
+      const transparenciaBtn = document.getElementById("consultarTransparenciaWhatsapp");
+      
+      if (navBtn) navBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (mobileBtn) mobileBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (floatingBtn) floatingBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (footerBtn) footerBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (heroBtn) heroBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaBtn) ctaBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaFinalBtn) ctaFinalBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (ctaEmpezarBtn) ctaEmpezarBtn.href = getWhatsAppURL(MSG_EMPEZAR);
+      if (tranquilidadBtn) tranquilidadBtn.href = getWhatsAppURL(MSG_GENERAL);
+      if (introBtn) introBtn.href = getWhatsAppURL(MSG_GENERAL);
+      
+      if (empezarBtn) {
+        empezarBtn.onclick = function() { window.open(getWhatsAppURL(MSG_EMPEZAR), "_blank"); };
+      }
+      if (consultarZonaBtn) {
+        consultarZonaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_CONSULTA), "_blank"); };
+      }
+      if (consultarCostoBtn) {
+        consultarCostoBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_COSTO), "_blank"); };
+      }
+      if (pickupBtn) {
+        pickupBtn.onclick = function() { window.open(getWhatsAppURL(MSG_PICKUP), "_blank"); };
+      }
+      if (transparenciaBtn) {
+        transparenciaBtn.onclick = function(e) { e.preventDefault(); window.open(getWhatsAppURL(MSG_TRANSPARENCIA), "_blank"); };
+      }
+    });
   </script>
 
 </body>
