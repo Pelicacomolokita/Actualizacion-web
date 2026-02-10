@@ -1,0 +1,17 @@
+# .htaccess - Envío Directo
+# Redirects y configuración del servidor
+
+# Activar rewrite engine
+RewriteEngine On
+
+# Redirect de /inicio a la página principal
+RewriteRule ^inicio$ / [R=301,L]
+RewriteRule ^inicio.html$ / [R=301,L]
+
+# Forzar HTTPS (opcional pero recomendado)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Forzar WWW (opcional)
+RewriteCond %{HTTP_HOST} !^www\. [NC]
+RewriteRule ^(.*)$ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]

@@ -1,13 +1,11 @@
-# Robots.txt - Envío Directo
-# Permite a todos los buscadores indexar todo el sitio
+# robots.txt para Envío Directo
+# Generado: 2026-02-09
 
 User-agent: *
 Allow: /
 
-# Sitemap
+# Archivos importantes
 Sitemap: https://www.enviodirecto-uy.com/sitemap.xml
 
-# Bloquear archivos que no queremos indexar (opcional)
-Disallow: /cgi-bin/
-Disallow: /tmp/
-Disallow: /*.pdf$
+# Bloquear archivos innecesarios para crawlers
+Disallow: /assets/*.webp$
