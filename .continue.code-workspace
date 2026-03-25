@@ -1,0 +1,19 @@
+{
+	"folders": [
+		{
+			"path": ".continue"
+		},
+		{
+			"path": "assets"
+		},
+		{
+			"path": "node_modules"
+		},
+		{
+			"path": "txt"
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": ".continue"
+	}
+}

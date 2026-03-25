@@ -1,11 +1,6 @@
 # robots.txt para Envío Directo
-# Generado: 2026-02-09
 
 User-agent: *
 Allow: /
 
-# Archivos importantes
 Sitemap: https://www.enviodirecto-uy.com/sitemap.xml
-
-# Bloquear archivos innecesarios para crawlers
-Disallow: /assets/*.webp$
