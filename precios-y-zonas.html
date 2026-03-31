@@ -28,6 +28,7 @@
   <meta name="twitter:title" content="Precios y Zonas | Envío Directo — Cadetería en Montevideo" />
   <meta name="twitter:description" content="Precios y zonas de Envío Directo en Montevideo. Calculá el costo según la zona más lejana entre retiro y entrega, más los servicios extra." />
   <meta name="twitter:image" content="https://www.enviodirecto-uy.com/assets/og-image.jpg" />
+  <link rel="canonical" href="https://www.enviodirecto-uy.com/precios-y-zonas.html" />
 
   <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png" />
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon-96x96.png" />
@@ -48,12 +49,6 @@
   <link href="styles.css" rel="stylesheet" />
 
 
-  <style>
-    body { font-family: 'Work Sans', sans-serif; }
-    .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
-    ::selection { background-color: #DC2626; color: white; }
-  </style>
-
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -66,47 +61,12 @@
   </script>
 </head>
 
-<body class="bg-base text-gray-100 transition-colors duration-300 selection:bg-primary selection:text-white">
+<body class="bg-base text-gray-100 transition-colors duration-300 selection:bg-primary selection:text-white" data-page="precios">
   <!-- Google Tag Manager (noscript) -->
   <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMQGBVPL"
   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <!-- End Google Tag Manager (noscript) -->
 
-
-  <!-- CONFIG LINKS -->
-  <script>
-    // WhatsApp Configuration
-    const WHATSAPP_NUMBER = "59897428015";
-    const MSG_NAV = "Hola! Vi la página de precios y me interesa coordinar envíos. ¿Podemos hablar?";
-    const MSG_GENERAL = "Hola! Vi la página de precios y me interesa coordinar envíos. ¿Podemos hablar?";
-    const MSG_EMPEZAR = "Hola! Ya vi los precios y quiero empezar a trabajar con Envío Directo. ¿Me pasan el esquema de datos?";
-    const MSG_CONSULTA = "Hola! Quiero saber a qué zonas llegan y cuánto sale el envío.";
-    const MSG_COSTO = "Hola! Necesito cotizar un envío. ¿Me pueden ayudar?";
-    const MSG_PICKUP = "Hola! Me interesa usar el pickup point. ¿Cómo funciona y dónde queda?";
-    const MSG_TRANSPARENCIA = "Hola! Quiero entender bien cómo funciona el servicio antes de empezar.";
-    const MSG_ZONA = "Hola! Tengo dudas sobre a qué zona pertenece mi dirección en Montevideo.";
-    
-    
-    // Ajustá esto y listo
-    const WHATSAPP_PHONE = "59897428015";
-
-    // Links internos
-    const HOME_LINK = "index.html";
-    const SERVICIOS_LINK = "servicios.html";
-    const COORDINAR_LINK = "coordinar-envio.html";
-    const PRECIOS_LINK = "precios-y-zonas.html";
-
-    // Links externos
-    const PDF_LINK = "https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing";
-    // Poné acá tu mapa / herramienta de zonas (My Maps o lo que uses)
-    const ZONAS_MAP_LINK = "https://www.google.com/maps/d/"; // <- cambiá este link
-
-    // Mensajes WhatsApp
-
-    function wppUrl(message) {
-      return `https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`;
-    }
-  </script>
 
   <!-- NAV -->
   <nav class="fixed top-0 z-[100] w-full bg-background-dark">
@@ -116,42 +76,42 @@
           <div class="w-12 h-12 rounded-full overflow-hidden border border-white/10 bg-black/20 flex items-center justify-center">
             <img src="assets/logo-envio-directo.webp" alt="Logo Envío Directo" class="w-full h-full object-cover" width="48" height="48" loading="eager" />
           </div>
-          <h1 class="text-xl font-bold tracking-tight text-white">Envío Directo</h1>
+          <span class="text-xl font-bold tracking-tight text-white">Envío Directo</span>
         </a>
 
         <div class="hidden md:flex items-center gap-8">
-          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="index.html">Inicio</a>
-          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="index.html" data-event="click_inicio" data-location="desktop_nav" data-page="precios" data-section="nav">Inicio</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="servicios.html" data-event="click_servicios" data-location="desktop_nav" data-page="precios" data-section="nav">Servicios</a>
 
           <a class="text-sm font-bold text-white transition-colors relative" href="precios-y-zonas.html" aria-current="page">
             Precios y zonas
             <span class="absolute -bottom-2 left-0 w-full h-[2px] bg-primary rounded-full"></span>
           </a>
 
-          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="coordinar-envio.html">Coordinar envío</a>
-          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="coordinar-envio.html" data-event="click_agendar" data-location="desktop_nav" data-page="precios" data-section="nav" data-intent="alta">Coordinar envío</a>
+          <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="preguntas-frecuentes.html" data-event="click_faq" data-location="desktop_nav" data-page="precios" data-section="nav">Preguntas frecuentes</a>
 
-          <a id="navWhatsappBtn" class="bg-primary hover:bg-red-700 text-white px-6 py-2.5 rounded-full text-sm font-black transition-all shadow-lg shadow-red-900/20" data-event="click_whatsapp" data-location="header" data-intent="alta" data-page="precios" href="https://wa.me/59897428015?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20precios%20y%20me%20interesa%20coordinar%20env%C3%ADos.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer">
+          <a id="navWhatsappBtn" class="bg-primary hover:bg-red-700 text-white px-6 py-2.5 rounded-full text-sm font-black transition-all shadow-lg shadow-red-900/20" data-event="click_whatsapp" data-location="desktop_nav" data-intent="alta" data-page="precios" data-section="nav" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer">
             Hablar con coordinación
           </a>
         </div>
 
-        <button id="mobileMenuBtn" class="md:hidden text-white w-12 h-12 rounded-full hover:bg-white/10 transition flex items-center justify-center" aria-label="Abrir menú">
+        <button id="mobileMenuBtn" class="md:hidden text-white w-12 h-12 rounded-full hover:bg-white/10 transition flex items-center justify-center" aria-label="Abrir menú" aria-expanded="false" aria-controls="mobileMenu">
           <span class="material-symbols-outlined text-3xl">menu</span>
         </button>
       </div>
     </div>
 
     <!-- Mobile menu -->
-    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-background-dark/95 backdrop-blur-md">
+    <div id="mobileMenu" class="md:hidden hidden border-t border-white/10 bg-background-dark/95 backdrop-blur-md" aria-hidden="true">
       <div class="max-w-7xl mx-auto px-4 py-5 space-y-3">
-        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="index.html">Inicio</a>
-        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="servicios.html">Servicios</a>
+        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="index.html" data-event="click_inicio" data-location="mobile_nav" data-page="precios" data-section="nav">Inicio</a>
+        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="servicios.html" data-event="click_servicios" data-location="mobile_nav" data-page="precios" data-section="nav">Servicios</a>
         <a class="block text-sm font-bold text-white" href="precios-y-zonas.html" aria-current="page">Precios y zonas</a>
-        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="coordinar-envio.html">Coordinar envío</a>
-        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="coordinar-envio.html" data-event="click_agendar" data-location="mobile_nav" data-page="precios" data-section="nav" data-intent="alta">Coordinar envío</a>
+        <a class="block text-sm font-medium text-gray-200 hover:text-primary transition-colors" href="preguntas-frecuentes.html" data-event="click_faq" data-location="mobile_nav" data-page="precios" data-section="nav">Preguntas frecuentes</a>
 
-        <a id="mobileWhatsappBtn" class="mt-3 inline-flex w-full items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-full text-sm font-black transition-all shadow-lg shadow-red-900/20" data-event="click_whatsapp" data-location="mobile_menu" data-intent="alta" data-page="precios" href="https://wa.me/59897428015?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20precios%20y%20me%20interesa%20coordinar%20env%C3%ADos.%20%C2%BFPodemos%20hablar%3F" target="_blank" rel="noopener noreferrer">
+          <a id="mobileWhatsappBtn" class="mt-3 inline-flex w-full items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-full text-sm font-black transition-all shadow-lg shadow-red-900/20" data-event="click_whatsapp" data-location="mobile_nav" data-intent="alta" data-page="precios" data-section="nav" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer">
           <span class="material-symbols-outlined">chat</span>
           Hablar con coordinación
         </a>
@@ -162,7 +122,7 @@
   <main class="max-w-[1200px] mx-auto px-6">
 
     <!-- HERO -->
-    <section class="py-12 md:py-20 flex flex-col md:flex-row items-center gap-12 pt-20">
+    <section class="py-12 md:py-20 flex flex-col md:flex-row items-center gap-12 pt-28 md:pt-28" data-view-event="view_pricing_hero" data-section="hero">
       <div class="flex-1 space-y-8">
         <h1 class="text-5xl md:text-7xl font-black leading-[0.9] tracking-tighter text-white">
           Precios y zonas de envío en <span class="text-primary">Montevideo</span>
@@ -189,10 +149,10 @@
         </ul>
 
         <div class="flex flex-wrap gap-4 pt-4">
-          <a href="#calculadora" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/30">
+          <a href="#calculadora" class="inline-flex items-center justify-center bg-primary text-white px-8 py-4 rounded-xl font-bold text-lg hover:scale-105 transition-transform shadow-lg shadow-primary/30" data-event="click_cotizar" data-location="hero" data-page="precios" data-section="hero" data-intent="alta">
             Cotizar envío
           </a>
-          <a href="#zonas" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:border-white hover:bg-white hover:text-black transition-all">
+          <a href="#zonas" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-8 py-4 rounded-xl font-bold text-lg hover:border-white hover:bg-white hover:text-black transition-all" data-event="click_ver_zonas" data-location="hero" data-page="precios" data-section="hero">
             Ver zonas y tarifas
           </a>
         </div>
@@ -224,7 +184,7 @@
     </section>
 
     <!-- CÓMO SE CALCULA -->
-    <section class="py-16 border-t border-border-dark">
+    <section class="py-16 border-t border-border-dark" data-view-event="view_price_logic" data-section="price_logic">
       <h2 class="text-3xl font-bold mb-10 text-center text-white">Cómo calculamos el precio</h2>
 
       <div class="grid md:grid-cols-2 gap-8">
@@ -241,7 +201,7 @@
               </p>
             </div>
           </div>
-          <a href="#zonas" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold text-sm transition-all self-start shadow-lg shadow-primary/20">
+          <a href="#zonas" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold text-sm transition-all self-start shadow-lg shadow-primary/20" data-event="click_ver_zonas" data-location="price_logic" data-page="precios" data-section="price_logic">
             Ver zonas y tarifas
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
@@ -260,7 +220,7 @@
               </p>
             </div>
           </div>
-          <a href="#servicios" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold text-sm transition-all self-start shadow-lg shadow-primary/20">
+          <a href="#servicios" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-4 py-2.5 rounded-lg font-bold text-sm transition-all self-start shadow-lg shadow-primary/20" data-event="click_servicios" data-location="price_logic" data-page="precios" data-section="price_logic">
             Explorar servicios extras
             <span class="material-symbols-outlined text-sm">arrow_forward</span>
           </a>
@@ -316,7 +276,7 @@
     </section>
 
     <!-- ZONAS -->
-    <section class="py-16 scroll-mt-24" id="zonas">
+    <section class="py-16 scroll-mt-24" id="zonas" data-view-event="view_zone_table" data-section="zone_table">
       <div class="text-center mb-12">
         <h2 class="text-4xl font-black mb-4 text-white">Zonas y tarifas en Montevideo</h2>
         <p class="text-gray-400">
@@ -324,17 +284,17 @@
         </p>
 
         <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mt-8">
-          <a href="https://www.google.com/maps/d/u/0/edit?mid=1t8whC2Jqn6bzFt09bE5QrlWaimmLroo" target="_blank" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-6 py-3 rounded-xl font-bold hover:border-white hover:bg-white hover:text-black transition-all">
+          <a href="https://www.google.com/maps/d/u/0/edit?mid=1t8whC2Jqn6bzFt09bE5QrlWaimmLroo" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-6 py-3 rounded-xl font-bold hover:border-white hover:bg-white hover:text-black transition-all" data-event="click_google_maps" data-location="zone_table" data-page="precios" data-section="zone_table">
             <span class="material-symbols-outlined mr-2">search</span> Ver zonas y barrios
           </a>
-          <a id="consultarZonaWhatsapp" data-event="click_whatsapp" data-location="hero_zona" data-intent="muy_alta" data-page="precios" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20 cursor-pointer">
+          <a id="consultarZonaWhatsapp" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_whatsapp" data-location="zone_table" data-intent="muy_alta" data-page="precios" data-section="zone_table" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20 cursor-pointer">
             <span class="material-symbols-outlined mr-2">chat</span> Consultar zona por WhatsApp
           </a>
         </div>
       </div>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover:-translate-y-1 transition-all duration-300 group" data-zone="1">
+        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover:-translate-y-1 transition-all duration-300 group" data-zone="1" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver detalles de Zona 1">
           <div class="flex justify-between items-start mb-6">
             <span class="text-xs font-black uppercase tracking-widest bg-primary/10 text-primary px-3 py-1 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">Zona 1</span>
             <div class="text-3xl font-black text-white">$160</div>
@@ -344,7 +304,7 @@
           <p class="text-sm text-gray-400 leading-relaxed">Centro, Cordón, Pocitos, Parque Rodó, Tres Cruces, La Blanqueada, etc.</p>
         </div>
 
-        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover--translate-y-1 transition-all duration-300 group" data-zone="2">
+        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover:-translate-y-1 transition-all duration-300 group" data-zone="2" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver detalles de Zona 2">
           <div class="flex justify-between items-start mb-6">
             <span class="text-xs font-black uppercase tracking-widest bg-primary/10 text-primary px-3 py-1 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">Zona 2</span>
             <div class="text-3xl font-black text-white">$200</div>
@@ -354,7 +314,7 @@
           <p class="text-sm text-gray-400 leading-relaxed">Malvín, Punta Gorda, Sayago, Belvedere, Cerro Sur, etc.</p>
         </div>
 
-        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover--translate-y-1 transition-all duration-300 group" data-zone="3">
+        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover:-translate-y-1 transition-all duration-300 group" data-zone="3" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver detalles de Zona 3">
           <div class="flex justify-between items-start mb-6">
             <span class="text-xs font-black uppercase tracking-widest bg-primary/10 text-primary px-3 py-1 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">Zona 3</span>
             <div class="text-3xl font-black text-white">$240</div>
@@ -364,7 +324,7 @@
           <p class="text-sm text-gray-400 leading-relaxed">Carrasco, Colón, Manga, Punta de Rieles, Paso Carrasco, etc.</p>
         </div>
 
-        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover--translate-y-1 transition-all duration-300 group" data-zone="4">
+        <div class="zone-card cursor-pointer bg-surface p-6 rounded-2xl border-t-4 border-primary shadow-lg shadow-black/30 hover:bg-surface-alt hover:-translate-y-1 transition-all duration-300 group" data-zone="4" role="button" tabindex="0" aria-haspopup="dialog" aria-label="Ver detalles de Zona 4">
           <div class="flex justify-between items-start mb-6">
             <span class="text-xs font-black uppercase tracking-widest bg-primary/10 text-primary px-3 py-1 rounded-full group-hover:bg-primary group-hover:text-white transition-colors">Zona 4</span>
             <div class="text-3xl font-black text-white">$350</div>
@@ -377,7 +337,7 @@
     </section>
 
     <!-- CALCULADORA (VISUAL) -->
-    <section class="py-16 scroll-mt-24" id="calculadora">
+    <section class="py-16 scroll-mt-24" id="calculadora" data-view-event="view_calculator" data-section="calculator">
       <div class="bg-surface rounded-[2rem] border border-border-dark overflow-hidden shadow-2xl shadow-black/50">
         <div class="grid md:grid-cols-5 h-full">
 
@@ -538,7 +498,7 @@
                 </div>
               </div>
 
-              <button id="consultarCostoWhatsapp" data-event="click_whatsapp" data-location="calculadora" data-intent="muy_alta" data-page="precios" class="w-full bg-primary text-white py-4 rounded-xl font-black text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all group">
+              <button id="consultarCostoWhatsapp" data-event="click_calculator_whatsapp" data-location="calculator" data-intent="muy_alta" data-page="precios" data-section="calculator" class="w-full bg-primary text-white py-4 rounded-xl font-black text-lg shadow-xl shadow-primary/20 flex items-center justify-center gap-3 hover:bg-red-700 hover:scale-[1.02] active:scale-95 transition-all group">
                 <span class="material-symbols-outlined group-hover:animate-pulse">send</span>
                 Consultar costo exacto por WhatsApp
               </button>
@@ -557,7 +517,7 @@
     </section>
 
     <!-- SERVICIOS EXTRA -->
-    <section class="py-16 scroll-mt-24" id="servicios">
+    <section class="py-16 scroll-mt-24" id="servicios" data-view-event="view_pricing_extras" data-section="extras">
       <div class="grid lg:grid-cols-2 gap-12">
         <div class="bg-surface rounded-3xl border border-border-dark p-8 shadow-lg">
           <h3 class="text-2xl font-bold mb-6 text-white flex items-center gap-3">
@@ -616,7 +576,7 @@
             </div>
           </div>
 
-          <a href="servicios.html#servicios-extras" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/20 mt-6">
+          <a href="servicios.html#servicios-extras" class="inline-flex items-center justify-center gap-2 bg-primary hover:bg-red-700 text-white px-6 py-3 rounded-xl font-bold text-sm transition-all shadow-lg shadow-primary/20 mt-6" data-event="click_servicios" data-location="extras" data-page="precios" data-section="extras">
             <span class="material-symbols-outlined text-sm">info</span>
             Ver descripción completa de servicios
           </a>
@@ -648,10 +608,10 @@
               </li>
             </ul>
 
-            <button id="pickupWhatsappBtn" data-event="click_whatsapp" data-location="pickup_section" data-intent="alta" data-page="precios" class="bg-white text-primary font-bold px-6 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 w-fit">
+          <a id="pickupWhatsappBtn" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_whatsapp" data-location="pickup_section" data-intent="alta" data-page="precios" data-section="extras" class="bg-white text-primary font-bold px-6 py-4 rounded-xl hover:bg-gray-100 transition-colors shadow-lg flex items-center gap-2 w-fit">
               Consultar modalidad de pickup
               <span class="material-symbols-outlined text-sm">arrow_forward</span>
-            </button>
+            </a>
           </div>
 
           <div class="absolute -right-10 -bottom-10 opacity-10 rotate-12">
@@ -667,7 +627,7 @@
   <div class="container mx-auto px-6 mt-8 mb-12 text-center">
     <p class="text-neutral-500 text-sm">
       ¿Querés conocer más detalles sobre cada servicio? 
-      <a href="servicios.html" class="text-primary hover:underline font-semibold">
+      <a href="servicios.html" class="text-primary hover:underline font-semibold" data-event="click_servicios" data-location="extras" data-page="precios" data-section="extras">
         Ver información completa de servicios
       </a>
     </p>
@@ -676,7 +636,7 @@
 
 
     <!-- TRANSPARENCIA -->
-    <section class="py-16 bg-surface border border-border-dark rounded-3xl px-8 text-center mx-auto relative overflow-hidden">
+    <section class="py-16 bg-surface border border-border-dark rounded-3xl px-8 text-center mx-auto relative overflow-hidden" data-view-event="view_transparency" data-section="transparency">
       <div class="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent"></div>
       <div class="max-w-2xl mx-auto space-y-6 relative z-10">
         <div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto text-primary border border-primary/20">
@@ -688,10 +648,10 @@
           Cada costo responde a una condición real del servicio.
         </p>
         <div class="flex flex-col sm:flex-row justify-center gap-4 pt-2">
-          <a href="https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20">
+          <a href="https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="inline-flex items-center justify-center bg-primary text-white px-6 py-3 rounded-xl font-bold hover:bg-red-700 transition-all shadow-lg shadow-primary/20" data-event="click_pdf" data-location="transparency" data-page="precios" data-section="transparency">
             <span class="material-symbols-outlined mr-2">download</span> Descargar PDF de servicios
           </a>
-          <a id="consultarTransparenciaWhatsapp" data-event="click_whatsapp" data-location="transparencia_section" data-intent="alta" data-page="precios" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-6 py-3 rounded-xl font-bold hover:border-white hover:bg-white hover:text-black transition-all cursor-pointer">
+          <a id="consultarTransparenciaWhatsapp" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_whatsapp" data-location="transparency" data-intent="alta" data-page="precios" data-section="transparency" class="inline-flex items-center justify-center bg-transparent border-2 border-border-dark text-white px-6 py-3 rounded-xl font-bold hover:border-white hover:bg-white hover:text-black transition-all cursor-pointer">
             <span class="material-symbols-outlined mr-2">chat</span> Consultar por WhatsApp
           </a>
         </div>
@@ -699,7 +659,7 @@
     </section>
 
     <!-- CTA FINAL -->
-    <section class="py-24 text-center">
+    <section class="py-24 text-center" data-view-event="view_pricing_final_cta" data-section="final_cta">
       <h2 class="text-4xl md:text-5xl font-black mb-8 text-white tracking-tight">
         ¿Querés empezar a trabajar<br/>con Envío Directo?
       </h2>
@@ -709,15 +669,15 @@
       </p>
 
       <div class="flex flex-col md:flex-row justify-center gap-6">
-        <a href="coordinar-envio.html" class="bg-primary text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 hover:scale-105 transition-transform">
+        <a href="coordinar-envio.html" class="bg-primary text-white px-10 py-5 rounded-2xl font-black text-xl shadow-2xl shadow-primary/30 flex items-center justify-center gap-3 hover:scale-105 transition-transform" data-event="click_empezar" data-location="final_cta" data-page="precios" data-section="final_cta" data-intent="muy_alta">
           <span class="material-symbols-outlined">rocket_launch</span>
           Quiero empezar a trabajar
         </a>
 
-        <button id="empezarWhatsappBtn" data-event="click_whatsapp" data-location="cta_empezar" data-intent="muy_alta" data-page="precios" class="bg-transparent border-2 border-border-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 hover:bg-white hover:text-black hover:border-white transition-all">
+          <a id="empezarWhatsappBtn" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_whatsapp" data-location="final_cta" data-intent="muy_alta" data-page="precios" data-section="final_cta" class="bg-transparent border-2 border-border-dark text-white px-10 py-5 rounded-2xl font-black text-xl flex items-center justify-center gap-3 hover:bg-white hover:text-black hover:border-white transition-all">
           <span class="material-symbols-outlined">call</span>
           Escribir por WhatsApp
-        </button>
+        </a>
       </div>
     </section>
 
@@ -733,7 +693,8 @@
     <div class="container mx-auto px-6 text-center relative z-10 max-w-3xl">
       <h2 class="text-4xl md:text-5xl font-black mb-6">¿Listo para empezar?</h2>
       <p class="text-xl mb-8 text-white/90">Hablá con coordinación y empezá a enviar hoy mismo</p>
-      <a href="https://wa.me/59897428015?text=Hola%21%20Ya%20vi%20los%20precios%20y%20quiero%20empezar%20a%20trabajar%20con%20Env%C3%ADo%20Directo.%20%C2%BFMe%20pasan%20el%20esquema%20de%20datos%3F" 
+      <a id="bottomEmpezarWhatsappBtn" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." 
+         data-event="click_whatsapp" data-location="bottom_cta" data-page="precios" data-section="final_cta" data-intent="muy_alta"
          target="_blank" 
          rel="noopener noreferrer"
          class="inline-flex items-center gap-3 bg-white text-primary px-10 py-5 rounded-full font-black text-lg hover:scale-105 transition-transform shadow-2xl">
@@ -749,8 +710,8 @@
   <!-- FLOATING WHATSAPP -->
   <div class="fixed bottom-8 right-8 z-50">
     <a
-      id="floatingWhatsappBtn" data-event="click_whatsapp" data-location="floating" data-intent="alta" data-page="precios"
-      href="https://wa.me/59897428015?text=Hola%21%20Vi%20la%20p%C3%A1gina%20de%20precios%20y%20me%20interesa%20coordinar%20env%C3%ADos.%20%C2%BFPodemos%20hablar%3F"
+      id="floatingWhatsappBtn" data-event="click_whatsapp" data-location="floating" data-intent="alta" data-page="precios" data-section="floating"
+      href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos."
       target="_blank"
       rel="noopener noreferrer"
       class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl shadow-green-900/40 hover:scale-110 transition-transform flex items-center justify-center"
@@ -797,7 +758,7 @@
             </li>
             <li class="flex items-center gap-2">
               <span class="material-symbols-outlined text-xs text-primary">phone</span>
-              <a id="footerWhatsappLink" data-event="click_whatsapp" data-location="footer" data-intent="media" data-page="precios" class="text-gray-300 hover:text-primary transition-colors cursor-pointer">WhatsApp: 097 428 015</a>
+          <a id="footerWhatsappLink" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_whatsapp" data-location="footer" data-intent="media" data-page="precios" data-section="footer" class="text-gray-300 hover:text-primary transition-colors cursor-pointer">WhatsApp: 097 428 015</a>
             </li>
             <li class="text-xs text-gray-500 mt-4">
               Respuesta en horario de coordinación
@@ -809,15 +770,15 @@
         <div class="space-y-4">
           <h3 class="text-sm font-black uppercase tracking-wider text-white">Navegación</h3>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="index.html" class="hover:text-primary transition-colors">Inicio</a></li>
-            <li><a href="servicios.html" class="hover:text-primary transition-colors">Servicios</a></li>
-            <li><a href="precios-y-zonas.html" class="hover:text-primary transition-colors">Precios y zonas</a></li>
-            <li><a href="coordinar-envio.html" class="hover:text-primary transition-colors">Coordinar envío</a></li>
+            <li><a href="index.html" class="hover:text-primary transition-colors" data-event="click_inicio" data-location="footer_nav" data-page="precios" data-section="footer">Inicio</a></li>
+            <li><a href="servicios.html" class="hover:text-primary transition-colors" data-event="click_servicios" data-location="footer_nav" data-page="precios" data-section="footer">Servicios</a></li>
+            <li><a href="precios-y-zonas.html" class="hover:text-primary transition-colors" data-event="click_precios" data-location="footer_nav" data-page="precios" data-section="footer">Precios y zonas</a></li>
+            <li><a href="coordinar-envio.html" class="hover:text-primary transition-colors" data-event="click_agendar" data-location="footer_nav" data-page="precios" data-section="footer" data-intent="alta">Coordinar envío</a></li>
             <li>
-              <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="preguntas-frecuentes.html">Preguntas frecuentes</a>
+              <a class="text-sm font-medium text-gray-300 hover:text-primary transition-colors" href="preguntas-frecuentes.html" data-event="click_faq" data-location="footer_nav" data-page="precios" data-section="footer">Preguntas frecuentes</a>
             </li>
-            <li><a href="https://tally.so/r/3xA6rE" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Agendar online</a></li>
-            <li><a href="https://maps.app.goo.gl/7wdpHRyK9kCdFk4x8" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">Google Maps</a></li>
+            <li><a href="https://tally.so/r/3xA6rE" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" data-event="click_agendar" data-location="footer" data-page="precios" data-section="footer" data-intent="alta">Agendar online</a></li>
+            <li><a href="https://maps.app.goo.gl/7wdpHRyK9kCdFk4x8" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" data-event="click_google_maps" data-location="footer" data-page="precios" data-section="footer">Google Maps</a></li>
           </ul>
         </div>
 
@@ -825,8 +786,8 @@
         <div class="space-y-4">
           <h3 class="text-sm font-black uppercase tracking-wider text-white">Recursos</h3>
           <ul class="space-y-2 text-sm text-gray-400">
-            <li><a href="https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors">PDF de servicios</a></li>
-            <li><a href="#zonas" class="hover:text-primary transition-colors">Zonas y barrios</a></li>
+            <li><a href="https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing" target="_blank" rel="noopener noreferrer" class="hover:text-primary transition-colors" data-event="click_pdf" data-location="footer" data-page="precios" data-section="footer">PDF de servicios</a></li>
+            <li><a href="#zonas" class="hover:text-primary transition-colors" data-event="click_ver_zonas" data-location="footer" data-page="precios" data-section="footer">Zonas y barrios</a></li>
           </ul>
         </div>
       </div>
@@ -840,10 +801,10 @@
           © 2026 Envío Directo. Todos los derechos reservados.
         </p>
         <div class="flex gap-3">
-          <a href="https://www.instagram.com/envio_directo_cadeteria_mvd/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface border border-border-dark flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-colors" aria-label="Instagram">
+          <a href="https://www.instagram.com/envio_directo_cadeteria_mvd/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface border border-border-dark flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-colors" aria-label="Instagram" data-event="click_instagram" data-location="footer" data-page="precios" data-section="footer">
             <span class="material-symbols-outlined text-lg">photo_camera</span>
           </a>
-          <a href="https://www.youtube.com/@SrLunes_santiagofigueredo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface border border-border-dark flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-colors" aria-label="YouTube">
+          <a href="https://www.youtube.com/@SrLunes_santiagofigueredo" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-surface border border-border-dark flex items-center justify-center text-gray-400 hover:bg-primary hover:text-white hover:border-primary transition-colors" aria-label="YouTube" data-event="click_youtube" data-location="footer" data-page="precios" data-section="footer">
             <span class="material-symbols-outlined text-lg">smart_display</span>
           </a>
         </div>
@@ -851,24 +812,15 @@
     </div>
   </footer>
 
-  <!-- FLOATING WHATSAPP -->
-  <div class="fixed bottom-8 right-8 z-50">
-    <button class="bg-[#25D366] text-white p-4 rounded-full shadow-2xl shadow-green-900/40 hover:scale-110 transition-transform flex items-center justify-center" aria-label="WhatsApp">
-      <svg class="w-8 h-8" fill="currentColor" viewBox="0 0 24 24">
-        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"></path>
-      </svg>
-    </button>
-  </div>
-
   <!-- MODAL DE ZONAS -->
-  <div id="zoneModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4">
+  <div id="zoneModal" class="hidden fixed inset-0 bg-black/50 backdrop-blur-sm z-50 flex items-center justify-center p-4" role="dialog" aria-modal="true" aria-hidden="true" aria-labelledby="modalZoneName" aria-describedby="modalZoneDescription">
     <div class="bg-surface border border-border-dark rounded-3xl p-8 md:p-12 max-w-lg w-full max-h-[90vh] overflow-y-auto shadow-2xl">
       <div class="flex justify-between items-start mb-6">
         <div>
           <h2 class="text-3xl font-black text-white" id="modalZoneName">Zona 1</h2>
-          <p class="text-gray-400 text-sm mt-1">Detalles y barrios correspondientes</p>
+          <p class="text-gray-400 text-sm mt-1" id="modalZoneDescription">Detalles y barrios correspondientes</p>
         </div>
-        <button id="closeZoneModal" class="text-gray-400 hover:text-white transition-colors">
+        <button id="closeZoneModal" type="button" aria-label="Cerrar modal de zona" class="text-gray-400 hover:text-white transition-colors">
           <span class="material-symbols-outlined text-2xl">close</span>
         </button>
       </div>
@@ -893,17 +845,21 @@
 
         <!-- Botones -->
         <div class="space-y-3 pt-4 border-t border-border-dark">
-          <a href="#" class="w-full bg-primary text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
+      <a id="zoneModalWhatsappBtn" href="https://wa.me/59897428015?text=Hola%2C%20vi%20su%20p%C3%A1gina%20web%20y%20quiero%20empezar%20a%20coordinar%20env%C3%ADos." target="_blank" rel="noopener noreferrer" data-event="click_modal_whatsapp" data-location="zone_modal" data-page="precios" data-section="zone_table" class="w-full bg-primary text-white py-3 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-red-700 transition-colors shadow-lg shadow-primary/20">
             <span class="material-symbols-outlined text-sm">chat</span>
             Consultar dirección por WhatsApp
           </a>
-          <button id="closeZoneModalBtn" class="w-full bg-surface-alt text-gray-300 py-3 rounded-xl font-bold hover:bg-surface-alt/80 transition-colors border border-border-dark">
+          <button id="closeZoneModalBtn" type="button" class="w-full bg-surface-alt text-gray-300 py-3 rounded-xl font-bold hover:bg-surface-alt/80 transition-colors border border-border-dark">
             Cerrar
           </button>
         </div>
       </div>
     </div>
   </div>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/tracking.js"></script>
+  <script src="assets/js/main.js"></script>
 
   <script>
     // Datos de barrios por zona
@@ -925,7 +881,7 @@
     const barrioToZone = {};
     Object.entries(barrios).forEach(([zone, barrioList]) => {
       barrioList.forEach(barrio => {
-        barrioToZone[barrio.toLowerCase()] = parseInt(zone);
+        barrioToZone[barrio.toLowerCase()] = parseInt(zone, 10);
       });
     });
 
@@ -945,32 +901,63 @@
     const closeZoneModal = document.getElementById('closeZoneModal');
     const closeZoneModalBtn = document.getElementById('closeZoneModalBtn');
     const zoneCards = document.querySelectorAll('.zone-card');
+    const zoneModalWhatsappBtn = document.getElementById('zoneModalWhatsappBtn');
+    let lastFocusedElement = null;
+
+    function openZoneModal(zoneNum) {
+      const zoneName = zoneConfig[zoneNum].name;
+      const zonePrice = zoneConfig[zoneNum].price;
+      const barriosList = barrios[zoneNum];
+
+      document.getElementById('modalZoneName').textContent = zoneName;
+      document.getElementById('modalZonePrice').textContent = `$${zonePrice}`;
+
+      const barriosHtml = barriosList.map((barrio) =>
+        `<div class="bg-base px-4 py-3 rounded-lg text-gray-300 text-sm border border-border-dark">${barrio}</div>`
+      ).join('');
+      document.getElementById('modalZoneBarrios').innerHTML = barriosHtml;
+
+      if (zoneModalWhatsappBtn) {
+        zoneModalWhatsappBtn.href = window.wppUrl(`${window.APP_CONFIG.MESSAGES.PRECIOS_ZONA} Estoy mirando ${zoneName}.`);
+        zoneModalWhatsappBtn.dataset.modalId = `zone_${zoneNum}`;
+      }
+
+      window.trackEvent('open_modal', {
+        page_name: 'precios',
+        section: 'zone_table',
+        modal_id: `zone_${zoneNum}`
+      });
+
+      lastFocusedElement = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+      zoneModal.classList.remove('hidden');
+      zoneModal.setAttribute('aria-hidden', 'false');
+      closeZoneModal.focus();
+    }
 
     // Modal de zonas - Abrir
-    zoneCards.forEach(card => {
+    zoneCards.forEach((card) => {
       card.addEventListener('click', () => {
-        const zoneNum = card.dataset.zone;
-        const zoneName = zoneConfig[zoneNum].name;
-        const zonePrice = zoneConfig[zoneNum].price;
-        const barriosList = barrios[zoneNum];
+        openZoneModal(card.dataset.zone);
+      });
 
-        document.getElementById('modalZoneName').textContent = zoneName;
-        document.getElementById('modalZonePrice').textContent = `$${zonePrice}`;
-
-        const barriosHtml = barriosList.map(barrio =>
-          `<div class="bg-base px-4 py-3 rounded-lg text-gray-300 text-sm border border-border-dark">${barrio}</div>`
-        ).join('');
-        document.getElementById('modalZoneBarrios').innerHTML = barriosHtml;
-
-        zoneModal.classList.remove('hidden');
+      card.addEventListener('keydown', (event) => {
+        if (event.key === 'Enter' || event.key === ' ') {
+          event.preventDefault();
+          openZoneModal(card.dataset.zone);
+        }
       });
     });
 
     // Modal de zonas - Cerrar
-    closeZoneModal.addEventListener('click', () => zoneModal.classList.add('hidden'));
-    closeZoneModalBtn.addEventListener('click', () => zoneModal.classList.add('hidden'));
+    closeZoneModal.addEventListener('click', closeZoneModalPanel);
+    closeZoneModalBtn.addEventListener('click', closeZoneModalPanel);
     zoneModal.addEventListener('click', (e) => {
-      if (e.target === zoneModal) zoneModal.classList.add('hidden');
+      if (e.target === zoneModal) closeZoneModalPanel();
+    });
+    document.addEventListener('keydown', (event) => {
+      if (event.key === 'Escape' && !zoneModal.classList.contains('hidden')) {
+        closeZoneModalPanel();
+      }
     });
 
     // Función para filtrar y mostrar sugerencias
@@ -1026,6 +1013,70 @@
     const searchTypeButtons = document.querySelectorAll('.search-type-btn');
 
     let currentSearchType = 'zona';
+    let lastSelectionSignature = '';
+    let lastCalculationSignature = '';
+
+    function getSelectedExtras() {
+      const extras = [];
+      serviceCheckboxes.forEach((checkbox) => {
+        if (checkbox.checked) {
+          extras.push(checkbox.parentElement.textContent.trim());
+        }
+      });
+      return extras;
+    }
+
+    function buildCalculatorPayload(maxZone, extras) {
+      return {
+        page_name: 'precios',
+        section: 'calculator',
+        zone: `zone_${maxZone}`,
+        zone_label: zoneConfig[maxZone]?.name || '',
+        pricing_mode: currentSearchType,
+        has_extras: extras.length > 0
+      };
+    }
+
+    function trackCalculatorState(maxZone, extras) {
+      if (!maxZone) {
+        lastSelectionSignature = '';
+        lastCalculationSignature = '';
+        return;
+      }
+
+      const selectionSignature = JSON.stringify({
+        pricing_mode: currentSearchType,
+        zone: maxZone
+      });
+
+      if (selectionSignature !== lastSelectionSignature) {
+        window.trackEvent('select_zone', buildCalculatorPayload(maxZone, extras));
+        lastSelectionSignature = selectionSignature;
+      }
+
+      const calculationSignature = JSON.stringify({
+        pricing_mode: currentSearchType,
+        zone: maxZone,
+        extras
+      });
+
+      if (calculationSignature !== lastCalculationSignature) {
+        window.trackEvent('calculate_price', {
+          ...buildCalculatorPayload(maxZone, extras),
+          extras_count: extras.length,
+          result_type: 'valid_estimate'
+        });
+        lastCalculationSignature = calculationSignature;
+      }
+    }
+
+    function closeZoneModalPanel() {
+      zoneModal.classList.add('hidden');
+      zoneModal.setAttribute('aria-hidden', 'true');
+      if (lastFocusedElement) {
+        lastFocusedElement.focus();
+      }
+    }
 
     searchTypeButtons.forEach(btn => {
       btn.addEventListener('click', () => {
@@ -1069,8 +1120,8 @@
       let maxZone = 0;
 
       if (currentSearchType === 'zona') {
-        const pickupZone = parseInt(pickupZonaSelect.value) || 0;
-        const deliveryZone = parseInt(deliveryZonaSelect.value) || 0;
+        const pickupZone = parseInt(pickupZonaSelect.value, 10) || 0;
+        const deliveryZone = parseInt(deliveryZonaSelect.value, 10) || 0;
         maxZone = Math.max(pickupZone, deliveryZone);
       } else {
         const pickupBarrio = pickupInput.value.toLowerCase().trim();
@@ -1088,14 +1139,16 @@
         extrasPriceDisplay.textContent = '$0';
         zoneDisplay.textContent = 'Seleccionar barrio';
         zoneLabel.textContent = '-';
+        trackCalculatorState(0, []);
         return;
       }
 
       const basePrice = zoneConfig[maxZone].price;
+      const selectedExtras = getSelectedExtras();
 
       let extrasTotal = 0;
       serviceCheckboxes.forEach(checkbox => {
-        if (checkbox.checked) extrasTotal += parseInt(checkbox.dataset.price);
+        if (checkbox.checked) extrasTotal += parseInt(checkbox.dataset.price, 10);
       });
 
       const totalPrice = basePrice + extrasTotal;
@@ -1106,101 +1159,37 @@
       extrasPriceDisplay.textContent = `$${extrasTotal}`;
       zoneDisplay.textContent = zoneConfig[maxZone].name;
       zoneLabel.textContent = zoneConfig[maxZone].name;
+      trackCalculatorState(maxZone, selectedExtras);
     }
 
     pickupInput.addEventListener('change', calculatePrice);
     deliveryInput.addEventListener('change', calculatePrice);
     serviceCheckboxes.forEach(checkbox => checkbox.addEventListener('change', calculatePrice));
 
-    const consultarZonaBtn = document.getElementById('consultarZonaWhatsapp');
-    if (consultarZonaBtn) {
-      consultarZonaBtn.addEventListener('click', () => window.open(wppUrl(MSG_ZONA), '_blank'));
-    }
-
     const consultarCostoBtn = document.getElementById('consultarCostoWhatsapp');
     if (consultarCostoBtn) {
       consultarCostoBtn.addEventListener('click', () => {
-        const pickup = pickupInput.value || 'No especificado';
-        const delivery = deliveryInput.value || 'No especificado';
-        const basePrice = totalPriceDisplay.textContent;
+        const pickup =
+          currentSearchType === 'zona'
+            ? (pickupZonaSelect.options[pickupZonaSelect.selectedIndex]?.textContent || 'No especificado')
+            : (pickupInput.value || 'No especificado');
+        const delivery =
+          currentSearchType === 'zona'
+            ? (deliveryZonaSelect.options[deliveryZonaSelect.selectedIndex]?.textContent || 'No especificado')
+            : (deliveryInput.value || 'No especificado');
+        const servicios = getSelectedExtras();
 
-        let servicios = [];
-        serviceCheckboxes.forEach(checkbox => {
-          if (checkbox.checked) servicios.push(checkbox.parentElement.textContent.trim());
-        });
+        let mensaje = 'Hola, me gustaría confirmar el costo exacto del envío:\n';
+        mensaje += `Retiro: ${pickup}\n`;
+        mensaje += `Entrega: ${delivery}\n`;
+        if (servicios.length > 0) mensaje += `Servicios: ${servicios.join(', ')}\n`;
+        mensaje += `Estimación: ${totalPriceDisplay.textContent}`;
 
-        let mensaje = `Hola, me gustaría confirmar el costo exacto del envío:\n`;
-        mensaje += `📍 Retiro: ${pickup}\n`;
-        mensaje += `📍 Entrega: ${delivery}\n`;
-        if (servicios.length > 0) mensaje += `📦 Servicios: ${servicios.join(', ')}\n`;
-        mensaje += `💰 Estimación: ${basePrice}`;
-
-        window.open(wppUrl(mensaje), '_blank');
+        window.open(window.wppUrl(mensaje), '_blank', 'noopener');
       });
-    }
-
-    const navWhatsappBtn = document.getElementById('navWhatsappBtn');
-    const mobileWhatsappBtn = document.getElementById('mobileWhatsappBtn');
-    if (navWhatsappBtn) {
-      navWhatsappBtn.href = wppUrl(MSG_NAV);
-      navWhatsappBtn.target = '_blank';
-    }
-    if (mobileWhatsappBtn) {
-      mobileWhatsappBtn.href = wppUrl(MSG_NAV);
-      mobileWhatsappBtn.target = '_blank';
-    }
-
-    const pickupWhatsappBtn = document.getElementById('pickupWhatsappBtn');
-    if (pickupWhatsappBtn) {
-      pickupWhatsappBtn.addEventListener('click', () => window.open(wppUrl(MSG_PICKUP), '_blank'));
-    }
-
-    const consultarTransparenciaWhatsapp = document.getElementById('consultarTransparenciaWhatsapp');
-    if (consultarTransparenciaWhatsapp) {
-      consultarTransparenciaWhatsapp.addEventListener('click', () => {
-        const msgTransparencia = "Hola, tengo dudas sobre los precios y servicios. ¿Podrían explicarme cómo se calcula el costo final?";
-        window.open(wppUrl(msgTransparencia), '_blank');
-      });
-    }
-
-    const empezarWhatsappBtn = document.getElementById('empezarWhatsappBtn');
-    if (empezarWhatsappBtn) {
-      empezarWhatsappBtn.addEventListener('click', () => {
-        const msgEmpezar = "Hola, ya entendí zonas, precios y servicios extra. ¿Qué datos necesitás para que empecemos a coordinar envíos?";
-        window.open(wppUrl(msgEmpezar), '_blank');
-      });
-    }
-
-    const footerWhatsappLink = document.getElementById('footerWhatsappLink');
-    if (footerWhatsappLink) {
-      footerWhatsappLink.addEventListener('click', () => window.open(wppUrl(MSG_NAV), '_blank'));
     }
 
     calculatePrice();
-    // Mobile menu toggle
-    const mobileMenuBtn = document.getElementById("mobileMenuBtn");
-    const mobileMenu = document.getElementById("mobileMenu");
-    if (mobileMenuBtn && mobileMenu) {
-      mobileMenuBtn.addEventListener("click", () => {
-        const isHidden = mobileMenu.classList.contains("hidden");
-        mobileMenu.classList.toggle("hidden", !isHidden ? true : false);
-        mobileMenuBtn.setAttribute("aria-label", isHidden ? "Cerrar menú" : "Abrir menú");
-        const icon = mobileMenuBtn.querySelector(".material-symbols-outlined");
-        if (icon) {
-          icon.textContent = isHidden ? "close" : "menu";
-        }
-      });
-    }
-  </script>
-
-
-  <script>
-    // Evento automático: usuario vio la página de precios
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      'event': 'view_pricing',
-      'page': 'precios'
-    });
   </script>
 
 </body>

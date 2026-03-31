@@ -48,8 +48,5 @@ window.trackEvent = function(eventName, data = {}, options = {}) {
   }
 
   window.dataLayer.push(payload);
-  console.debug("[GTM event]", payload.event, payload);
   return payload;
 };
-
-console.log("[Tracking] dataLayer inicializado y trackEvent disponible");

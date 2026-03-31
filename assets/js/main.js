@@ -13,13 +13,53 @@ const GTM_EVENT_TIMEOUT_MS = 1200;
  * Asigna URLs reales a botones
  */
 function bindLinks() {
+  const getMessage = (...keys) => {
+    const validKeys = keys.filter(Boolean);
+    for (const key of validKeys) {
+      if (window.APP_CONFIG.MESSAGES[key]) {
+        return window.APP_CONFIG.MESSAGES[key];
+      }
+    }
+    return "";
+  };
+
+  const navMessageKey = PAGE_NAME === "precios"
+    ? "PRECIOS_NAV"
+    : PAGE_NAME === "coordinar"
+      ? "COORDINAR_NAV"
+      : PAGE_NAME === "faq"
+        ? "FAQ_NAV"
+        : PAGE_NAME === "index"
+          ? "INDEX_NAV"
+          : "NAV";
+
+  const floatingMessageKey = PAGE_NAME === "coordinar"
+    ? "COORDINAR_HERO"
+    : PAGE_NAME === "precios"
+      ? "PRECIOS_NAV"
+      : PAGE_NAME === "faq"
+        ? "FAQ_NAV"
+        : PAGE_NAME === "index"
+          ? "INDEX_FLOATING"
+          : "NAV";
+
   const links = {
-    navWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.NAV),
-    mobileWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.NAV),
-    heroWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.EMPEZAR),
+    navWhatsappBtn: window.wppUrl(getMessage(navMessageKey, "NAV")),
+    mobileWhatsappBtn: window.wppUrl(getMessage(navMessageKey, "NAV")),
+    heroWhatsappBtn: window.wppUrl(getMessage(PAGE_NAME === "coordinar" ? "COORDINAR_HERO" : PAGE_NAME === "index" ? "INDEX_HERO" : "EMPEZAR", "EMPEZAR")),
     introWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.EMPEZAR),
-    ctaWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.EMPEZAR),
-    footerWhatsapp: window.wppUrl(window.APP_CONFIG.MESSAGES.NAV),
+    ctaWhatsappBtn: window.wppUrl(getMessage(PAGE_NAME === "index" ? "INDEX_CTA" : "EMPEZAR", "EMPEZAR")),
+    ctaFinalWhatsappBtn: window.wppUrl(getMessage("COORDINAR_CTA_FINAL", "COORDINAR_NAV", "NAV")),
+    procesodudasWhatsappBtn: window.wppUrl(getMessage("COORDINAR_PROCESO_DUDAS", "COORDINAR_NAV", "NAV")),
+    footerWhatsapp: window.wppUrl(getMessage(PAGE_NAME === "coordinar" ? "COORDINAR_NAV" : PAGE_NAME === "index" ? "INDEX_FOOTER" : "NAV", "NAV")),
+    footerWhatsappLink: window.wppUrl(getMessage(navMessageKey, "NAV")),
+    floatingWhatsappBtn: window.wppUrl(getMessage(floatingMessageKey, "NAV")),
+    ctaEmpezarWhatsapp: window.wppUrl(getMessage(PAGE_NAME === "faq" ? "FAQ_CTA" : "EMPEZAR", "EMPEZAR")),
+    consultarZonaWhatsapp: window.wppUrl(window.APP_CONFIG.MESSAGES.PRECIOS_ZONA || window.APP_CONFIG.MESSAGES.PRECIOS_NAV || window.APP_CONFIG.MESSAGES.NAV),
+    pickupWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.PRECIOS_PICKUP || window.APP_CONFIG.MESSAGES.PRECIOS_NAV || window.APP_CONFIG.MESSAGES.NAV),
+    consultarTransparenciaWhatsapp: window.wppUrl(window.APP_CONFIG.MESSAGES.PRECIOS_TRANSPARENCIA || window.APP_CONFIG.MESSAGES.PRECIOS_NAV || window.APP_CONFIG.MESSAGES.NAV),
+    empezarWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.PRECIOS_EMPEZAR || window.APP_CONFIG.MESSAGES.EMPEZAR),
+    bottomEmpezarWhatsappBtn: window.wppUrl(window.APP_CONFIG.MESSAGES.PRECIOS_EMPEZAR || window.APP_CONFIG.MESSAGES.EMPEZAR),
 
     heroPreciosBtn: window.APP_CONFIG.PRECIOS_LINK,
     introPreciosBtn: window.APP_CONFIG.PRECIOS_LINK,
@@ -142,10 +182,14 @@ function initSectionViews() {
  */
 function initTrackedEvents() {
   document.querySelectorAll("[data-event]").forEach((el) => {
+    if (el.matches("summary[data-event='faq_open']")) return;
+
     el.addEventListener("click", (event) => {
       const eventData = {
         page_name: el.dataset.page || PAGE_NAME,
         section: el.dataset.section || "",
+        target_section: el.dataset.targetSection || "",
+        modal_id: el.dataset.modalId || "",
         location: el.dataset.location || "unknown",
         intent: el.dataset.intent || "",
         element_text: (el.getAttribute("aria-label") || el.textContent || "").trim()
@@ -177,25 +221,43 @@ function initTrackedEvents() {
 }
 
 /**
+ * FAQ tracking
+ * Dispara solo cuando un details se abre
+ */
+function initFaqTracking() {
+  document.querySelectorAll("details summary[data-event='faq_open']").forEach((summary) => {
+    const details = summary.closest("details");
+    if (!details) return;
+
+    details.addEventListener("toggle", () => {
+      if (!details.open) return;
+
+      const questionText = (
+        summary.getAttribute("aria-label") ||
+        summary.querySelector("span")?.textContent ||
+        summary.textContent ||
+        ""
+      ).trim();
+
+      window.trackEvent("faq_open", {
+        page_name: summary.dataset.page || PAGE_NAME,
+        section: summary.dataset.section || "faq",
+        location: summary.dataset.location || "faq",
+        intent: summary.dataset.intent || "",
+        element_text: questionText
+      });
+    });
+  });
+}
+
+/**
  * Inicializar todo cuando el DOM este listo
  */
 document.addEventListener("DOMContentLoaded", () => {
-  console.log("[App Init] Comenzando inicializacion...");
-
   bindLinks();
-  console.log("[App Init] bindLinks completado");
-
   initMobileMenu();
-  console.log("[App Init] Mobile menu inicializado");
-
   initScrollTracking();
-  console.log("[App Init] Scroll tracking inicializado");
-
   initTrackedEvents();
-  console.log("[App Init] Tracking declarativo inicializado");
-
+  initFaqTracking();
   initSectionViews();
-  console.log("[App Init] Section views inicializado");
-
-  console.log("[App Init] Todas las funciones inicializadas correctamente");
 });

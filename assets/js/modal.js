@@ -326,7 +326,6 @@ window.openModal = function(key, triggerEl = null) {
   const section = getModalTrackingSection(triggerEl);
 
   if (!data) {
-    console.warn(`[Modal] Modal "${key}" no encontrado`);
     return;
   }
 
@@ -496,5 +495,3 @@ window.addEventListener("keydown", (e) => {
     window.closeModal();
   }
 });
-
-console.log("[Modal] Sistema de modales cargado");
