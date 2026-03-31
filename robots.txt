@@ -1,0 +1,6 @@
+# robots.txt para Envío Directo
+
+User-agent: *
+Allow: /
+
+Sitemap: https://www.enviodirecto-uy.com/sitemap.xml
