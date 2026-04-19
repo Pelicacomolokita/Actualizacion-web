@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WMQGBVPL');</script>
+  <!-- End Google Tag Manager -->
+
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+
+  <title>Reparte con Envío Directo | Programa de Repartidores</title>
+  <meta name="description" content="¿Buscás trabajar como repartidor? Completá el formulario y conocé las oportunidades con Envío Directo.">
+
+  <link href="styles.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet" media="print" onload="this.media='all'"/>
+  <noscript><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700&display=swap" rel="stylesheet"/></noscript>
+
+  <style>
+    .form-section {
+      display: none;
+    }
+    .form-section.active {
+      display: block;
+      animation: fadeIn 0.3s ease-in;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .form-group {
+      margin-bottom: 1.5rem;
+    }
+    .form-label {
+      display: block;
+      margin-bottom: 0.5rem;
+      font-weight: 600;
+      color: #e5e7eb;
+      font-size: 0.95rem;
+    }
+    .form-input, .form-select, .form-textarea {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      color: #fff;
+      font-family: inherit;
+      font-size: 1rem;
+      transition: border-color 0.2s, box-shadow 0.2s;
+    }
+    .form-input:focus, .form-select:focus, .form-textarea:focus {
+      outline: none;
+      border-color: #DC2626;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.1);
+    }
+    .form-input.field-error, .form-select.field-error, .form-textarea.field-error {
+      border-color: #DC2626;
+      box-shadow: 0 0 0 3px rgba(220, 38, 38, 0.12);
+    }
+    .form-select option {
+      background-color: #1a1a1a;
+      color: #fff;
+    }
+    .form-textarea {
+      resize: vertical;
+      min-height: 110px;
+    }
+    .radio-group {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    .radio-option {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      padding: 1rem;
+      background-color: rgba(255, 255, 255, 0.02);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 0.5rem;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+    .radio-option:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.2);
+    }
+    .radio-option input[type="radio"] {
+      margin-top: 0.25rem;
+      cursor: pointer;
+      accent-color: #DC2626;
+    }
+    .radio-option.selected {
+      background-color: rgba(220, 38, 38, 0.1);
+      border-color: #DC2626;
+    }
+    .button-group {
+      display: flex;
+      gap: 1rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .btn {
+      flex: 1;
+      min-width: 140px;
+      padding: 0.75rem 1.5rem;
+      border-radius: 0.5rem;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: all 0.2s;
+      font-size: 1rem;
+    }
+    .btn-primary {
+      background-color: #DC2626;
+      color: white;
+    }
+    .btn-primary:hover {
+      background-color: #b91c1c;
+    }
+    .btn-secondary {
+      background-color: transparent;
+      color: #e5e7eb;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+    }
+    .btn-secondary:hover {
+      background-color: rgba(255, 255, 255, 0.05);
+      border-color: rgba(255, 255, 255, 0.3);
+    }
+    .btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+    .progress-bar {
+      height: 4px;
+      background-color: rgba(255, 255, 255, 0.1);
+      border-radius: 2px;
+      margin-bottom: 2rem;
+      overflow: hidden;
+    }
+    .progress-fill {
+      height: 100%;
+      background-color: #DC2626;
+      transition: width 0.3s ease;
+    }
+    .alert {
+      padding: 1rem;
+      border-radius: 0.5rem;
+      margin-bottom: 1.5rem;
+    }
+    .alert-info {
+      background-color: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.3);
+      color: #93c5fd;
+    }
+    .alert-warning {
+      background-color: rgba(245, 158, 11, 0.1);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+      color: #fcd34d;
+    }
+    .alert-success {
+      background-color: rgba(34, 197, 94, 0.1);
+      border: 1px solid rgba(34, 197, 94, 0.3);
+      color: #86efac;
+    }
+    .section-title {
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: #f3f4f6;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .required {
+      color: #DC2626;
+    }
+  </style>
+</head>
+<body class="bg-dark-bg text-white" data-page="rutas-reparto">
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WMQGBVPL"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  <main>
+    <div class="bg-dark-bg text-white">
+      <section class="max-w-2xl mx-auto flex flex-col gap-10 px-4 sm:px-6 lg:px-8 pt-16 pb-24 lg:pt-24 lg:pb-32" data-view-event="view_form_repartidores" data-section="form_repartidores">
+
+        <div class="flex flex-col gap-4">
+          <h1 class="text-white text-4xl font-black leading-tight tracking-tight md:text-5xl">
+            Reparte con Envío Directo
+          </h1>
+          <p class="text-gray-400 text-lg leading-relaxed">
+            Completá tu información y conocé las oportunidades que tenemos para vos.
+          </p>
+        </div>
+
+        <form id="repartidoresForm" class="flex flex-col gap-6">
+          <div class="progress-bar">
+            <div class="progress-fill" id="progressFill" style="width: 33%"></div>
+          </div>
+
+          <div class="form-section active" id="seccionBase">
+            <div class="alert alert-info">
+              <p class="text-sm">Completá los datos base y luego te vamos a mostrar las preguntas específicas según el perfil que elijas.</p>
+            </div>
+
+            <div class="alert alert-warning">
+              <p class="text-sm"><strong>Priorizamos perfiles responsables, con buena comunicación, vehículo en condiciones y capacidad de trabajo ordenado.</strong></p>
+            </div>
+
+            <div class="section-title">
+              <span class="material-symbols-outlined">info</span>
+              Datos base
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Nombre completo <span class="required">*</span></label>
+              <input type="text" name="nombre" class="form-input" placeholder="Tu nombre completo">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Cédula <span class="required">*</span></label>
+              <input type="text" name="cedula" class="form-input" placeholder="1.234.567-8">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Edad <span class="required">*</span></label>
+              <input type="number" name="edad" class="form-input" min="18" placeholder="25">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Teléfono <span class="required">*</span></label>
+              <input type="tel" name="telefono" class="form-input" placeholder="099 123 456">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Email <span class="required">*</span></label>
+              <input type="email" name="email" class="form-input" placeholder="tunombre@email.com">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Perfil <span class="required">*</span></label>
+              <div class="radio-group" id="perfilGroup">
+                <label class="radio-option">
+                  <input type="radio" name="perfil" value="empleado">
+                  <div>
+                    <div class="font-semibold">Empleado</div>
+                    <div class="text-sm text-gray-400">Busco trabajo como cadete o repartidor</div>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="perfil" value="independiente">
+                  <div>
+                    <div class="font-semibold">Independiente</div>
+                    <div class="text-sm text-gray-400">Trabajo por mi cuenta pero sin empresa estructurada</div>
+                  </div>
+                </label>
+                <label class="radio-option">
+                  <input type="radio" name="perfil" value="empresario">
+                  <div>
+                    <div class="font-semibold">Empresario</div>
+                    <div class="text-sm text-gray-400">Ya tengo empresa o estoy armando una estructura propia</div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Barrio o zona <span class="required">*</span></label>
+              <input type="text" name="barrio" class="form-input" placeholder="Ej: Pocitos, Prado, Centro, etc.">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Vehículo <span class="required">*</span></label>
+              <select name="vehiculo" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="moto">Moto</option>
+                <option value="auto">Auto</option>
+                <option value="bicicleta">Bicicleta</option>
+                <option value="scooter">Scooter</option>
+                <option value="camioneta">Camioneta</option>
+                <option value="otro">Otro</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Condiciones del vehículo <span class="required">*</span></label>
+              <select name="estadoVehiculo" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="nuevo_este_ano">Nuevo (comprado este año)</option>
+                <option value="muy_bueno">Muy bueno (services al día, sin fallas)</option>
+                <option value="bueno">Bueno (funciona bien, con detalles menores)</option>
+                <option value="regular">Regular (requiere mantenimiento o arreglos menores)</option>
+                <option value="requiere_arreglos">Requiere arreglos</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Detalle de las condiciones del vehículo</label>
+              <textarea name="detalleCondicionesVehiculo" class="form-textarea" rows="3" placeholder="Opcional: agregá algún detalle extra sobre el estado del vehículo."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="flex items-start gap-3 text-sm text-gray-300 leading-relaxed cursor-pointer">
+                <input type="checkbox" name="consentimientoDatos" value="si" class="mt-1 h-4 w-4 accent-[#DC2626]">
+                <span>
+                  Autorizo a Envío Directo a guardar mis datos y contactarme en relación con esta solicitud.
+                  <span class="required">*</span>
+                </span>
+              </label>
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-primary" id="btnSiguienteBase" data-event="click_siguiente_repartidores" data-location="step_base" data-section="form_repartidores" data-page="rutas-reparto">Siguiente</button>
+            </div>
+          </div>
+
+          <div class="form-section" id="seccionOperativa">
+            <div class="section-title">
+              <span class="material-symbols-outlined">work_history</span>
+              <span id="tituloOperativo">Datos del perfil operativo</span>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">¿Tenés experiencia como cadete o repartidor? <span class="required">*</span></label>
+              <select name="experienciaCadete" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="sin_experiencia">Sin experiencia</option>
+                <option value="menos_de_1_ano">Menos de 1 año</option>
+                <option value="entre_1_y_2_anos">Entre 1 y 2 años</option>
+                <option value="entre_2_y_5_anos">Entre 2 y 5 años</option>
+                <option value="mas_de_5_anos">Más de 5 años</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">¿Tenés experiencia usando apps o sistemas de reparto? <span class="required">*</span></label>
+              <select name="experienciaAppsReparto" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="appsRepartoCualesGroup" style="display:none;">
+              <label class="form-label">¿Qué apps o sistemas usaste?</label>
+              <input type="text" name="appsRepartoCuales" class="form-input" placeholder="Ej: PedidosYa, Rappi, Mercado Envíos, sistema interno, etc.">
+            </div>
+
+            <div class="form-group" id="ultimaEmpresaGroup" style="display:none;">
+              <label class="form-label">¿Cuál fue la última empresa o cuenta para la que trabajaste?</label>
+              <input type="text" name="ultimaEmpresa" class="form-input" placeholder="Nombre de empresa, cuenta o app">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Contanos brevemente tu experiencia en el rubro <span class="required">*</span></label>
+              <textarea name="detalleExperiencia" class="form-textarea" placeholder="Contanos qué tipo de tareas hiciste, por cuánto tiempo y qué responsabilidades tenías."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Disponibilidad <span class="required">*</span></label>
+              <select name="disponibilidadOperativa" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="horario_completo">Horario completo</option>
+                <option value="solo_manana">Solo mañana</option>
+                <option value="solo_tarde">Solo tarde</option>
+                <option value="manana_y_tarde">Mañana y tarde</option>
+                <option value="dias_especificos">Días específicos</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="diasOperativosGroup" style="display:none;">
+              <label class="form-label">Si elegís días específicos, marcá cuáles</label>
+              <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="lunes" class="h-4 w-4 accent-[#DC2626]">Lunes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="martes" class="h-4 w-4 accent-[#DC2626]">Martes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="miercoles" class="h-4 w-4 accent-[#DC2626]">Miércoles</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="jueves" class="h-4 w-4 accent-[#DC2626]">Jueves</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="viernes" class="h-4 w-4 accent-[#DC2626]">Viernes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadOperativaDias" value="sabado" class="h-4 w-4 accent-[#DC2626]">Sábado</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Observaciones</label>
+              <textarea name="observacionesOperativas" class="form-textarea" placeholder="Si querés agregar algo más sobre tu situación actual, escribilo acá."></textarea>
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-secondary" id="btnVolverOperativa">Volver</button>
+              <button type="submit" class="btn btn-primary" id="btnEnviarOperativa">Enviar solicitud</button>
+            </div>
+          </div>
+
+          <div class="form-section" id="seccionEmpresaria">
+            <div class="section-title">
+              <span class="material-symbols-outlined">business</span>
+              Datos del perfil empresario
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Nombre de la empresa <span class="required">*</span></label>
+              <input type="text" name="nombreEmpresaInput" class="form-input" placeholder="Nombre de tu empresa">
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">¿Qué tipo de empresa tenés? <span class="required">*</span></label>
+              <select name="tipoEmpresa" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="unipersonal">Unipersonal</option>
+                <option value="monotributo">Monotributo</option>
+                <option value="literal_e_iva_minimo">Literal E / IVA mínimo</option>
+                <option value="sas">SAS</option>
+                <option value="srl">SRL</option>
+                <option value="sa">SA</option>
+                <option value="sociedad_de_hecho">Sociedad de hecho</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">¿Cómo trabajás actualmente? <span class="required">*</span></label>
+              <select name="modalidadOperativa" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="trabajo_solo">Trabajo solo</option>
+                <option value="tengo_empleados">Tengo empleados</option>
+                <option value="trabajo_con_socio">Trabajo con socio</option>
+                <option value="cubro_servicios_tercerizados">Cubro servicios tercerizados</option>
+                <option value="mixto">Mixto</option>
+                <option value="estoy_armando_estructura">Estoy armando estructura</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Contanos brevemente cómo funciona tu operativa <span class="required">*</span></label>
+              <textarea name="detalleEmpresa" class="form-textarea" placeholder="Contanos cómo trabajan hoy, qué volumen manejan y qué tipo de apoyo o alianza están buscando."></textarea>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Disponibilidad <span class="required">*</span></label>
+              <select name="disponibilidadEmpresaria" class="form-select">
+                <option value="">Seleccioná una opción</option>
+                <option value="horario_completo">Horario completo</option>
+                <option value="solo_manana">Solo mañana</option>
+                <option value="solo_tarde">Solo tarde</option>
+                <option value="manana_y_tarde">Mañana y tarde</option>
+                <option value="dias_especificos">Días específicos</option>
+              </select>
+            </div>
+
+            <div class="form-group" id="diasEmpresariosGroup" style="display:none;">
+              <label class="form-label">Si elegís días específicos, marcá cuáles</label>
+              <div class="grid grid-cols-2 gap-3 sm:grid-cols-3">
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="lunes" class="h-4 w-4 accent-[#DC2626]">Lunes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="martes" class="h-4 w-4 accent-[#DC2626]">Martes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="miercoles" class="h-4 w-4 accent-[#DC2626]">Miércoles</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="jueves" class="h-4 w-4 accent-[#DC2626]">Jueves</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="viernes" class="h-4 w-4 accent-[#DC2626]">Viernes</label>
+                <label class="flex items-center gap-2 text-sm text-gray-300"><input type="checkbox" name="disponibilidadEmpresariaDias" value="sabado" class="h-4 w-4 accent-[#DC2626]">Sábado</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label">Observaciones</label>
+              <textarea name="observacionesEmpresarias" class="form-textarea" placeholder="Si querés agregar contexto extra, escribilo acá."></textarea>
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-secondary" id="btnVolverEmpresaria">Volver</button>
+              <button type="submit" class="btn btn-primary" id="btnEnviarEmpresaria">Enviar solicitud</button>
+            </div>
+          </div>
+
+          <div class="form-section" id="seccionExito">
+            <div class="alert alert-success">
+              <p class="text-sm">Solicitud de contacto enviada correctamente.</p>
+            </div>
+
+            <div class="rounded-xl border border-white/10 bg-white/5 p-6 sm:p-8 flex flex-col gap-4">
+              <div class="section-title mb-0">
+                <span class="material-symbols-outlined">check_circle</span>
+                Solicitud enviada
+              </div>
+
+              <p class="text-gray-300 leading-relaxed">
+                Recibimos tu información y la vamos a revisar. Si tu perfil encaja con lo que estamos buscando, te vamos a contactar por los datos que dejaste en el formulario.
+              </p>
+
+              <p class="text-sm text-gray-400" id="successSubmissionId" style="display:none;"></p>
+            </div>
+
+            <div class="button-group">
+              <button type="button" class="btn btn-secondary" id="btnNuevaSolicitud">Enviar otra solicitud</button>
+              <a href="index.html" class="btn btn-primary text-center">Volver al inicio</a>
+            </div>
+          </div>
+        </form>
+      </section>
+    </div>
+  </main>
+
+  <script src="assets/js/config.js"></script>
+  <script src="assets/js/tracking.js"></script>
+  <script src="assets/js/main.js"></script>
+
+  <script>
+    const form = document.getElementById("repartidoresForm");
+    const progressFill = document.getElementById("progressFill");
+    const successSubmissionId = document.getElementById("successSubmissionId");
+    const scriptURL = "https://script.google.com/macros/s/AKfycbwzrfmtQrZq4RspZFqanpeqpdDJqV3473OuOVxHxVWzuaZ1pEKnhH9tE06yz3Z0kZaS/exec";
+
+    const sections = {
+      base: document.getElementById("seccionBase"),
+      operativa: document.getElementById("seccionOperativa"),
+      empresaria: document.getElementById("seccionEmpresaria"),
+      exito: document.getElementById("seccionExito")
+    };
+
+    const btnSiguienteBase = document.getElementById("btnSiguienteBase");
+    const btnVolverOperativa = document.getElementById("btnVolverOperativa");
+    const btnVolverEmpresaria = document.getElementById("btnVolverEmpresaria");
+    const btnNuevaSolicitud = document.getElementById("btnNuevaSolicitud");
+    const btnEnviarOperativa = document.getElementById("btnEnviarOperativa");
+    const btnEnviarEmpresaria = document.getElementById("btnEnviarEmpresaria");
+    const tituloOperativo = document.getElementById("tituloOperativo");
+    const appsRepartoCualesGroup = document.getElementById("appsRepartoCualesGroup");
+    const ultimaEmpresaGroup = document.getElementById("ultimaEmpresaGroup");
+    const diasOperativosGroup = document.getElementById("diasOperativosGroup");
+    const diasEmpresariosGroup = document.getElementById("diasEmpresariosGroup");
+
+    form.noValidate = true;
+
+    function getField(name) {
+      return form.querySelector(`[name="${name}"]`);
+    }
+
+    function getValue(name) {
+      const fields = form.querySelectorAll(`[name="${name}"]`);
+      if (!fields.length) return "";
+
+      const first = fields[0];
+      if (first.type === "radio") {
+        const checked = form.querySelector(`[name="${name}"]:checked`);
+        return checked ? checked.value.trim() : "";
+      }
+
+      if (first.type === "checkbox") {
+        return first.checked ? first.value.trim() : "";
+      }
+
+      return (first.value || "").trim();
+    }
+
+    function clearFieldErrors() {
+      form.querySelectorAll(".field-error").forEach((field) => field.classList.remove("field-error"));
+    }
+
+    function pushFormEvent(eventName, extraData = {}) {
+      window.dataLayer = window.dataLayer || [];
+
+      const payload = {
+        event: eventName,
+        page_name: "rutas-reparto",
+        page_path: window.location.pathname,
+        page_title: document.title,
+        section: "form_repartidores",
+        ...extraData
+      };
+
+      window.dataLayer.push(payload);
+    }
+
+    function getCheckedValues(name) {
+      return Array.from(form.querySelectorAll(`input[name="${name}"]:checked`)).map((field) => field.value.trim());
+    }
+
+    function markFieldError(name) {
+      const field = form.querySelector(`[name="${name}"]:checked`) || getField(name);
+      if (!field) return;
+      field.classList.add("field-error");
+      if (typeof field.focus === "function") {
+        field.focus();
+      }
+    }
+
+    function validateRequired(fieldNames, message) {
+      clearFieldErrors();
+
+      for (const fieldName of fieldNames) {
+        if (!getValue(fieldName)) {
+          pushFormEvent("error_form_repartidores", {
+            error_type: "validation",
+            error_field: fieldName
+          });
+          alert(message);
+          markFieldError(fieldName);
+          return false;
+        }
+      }
+
+      return true;
+    }
+
+    function syncRadioVisuals() {
+      form.querySelectorAll(".radio-option").forEach((option) => {
+        const input = option.querySelector("input[type='radio']");
+        option.classList.toggle("selected", Boolean(input && input.checked));
+      });
+    }
+
+    function showSection(sectionKey) {
+      Object.values(sections).forEach((section) => section.classList.remove("active"));
+      sections[sectionKey].classList.add("active");
+
+      if (sectionKey === "base") progressFill.style.width = "33%";
+      if (sectionKey === "operativa" || sectionKey === "empresaria") progressFill.style.width = "66%";
+      if (sectionKey === "exito") progressFill.style.width = "100%";
+
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
+    function updateConditionalFields() {
+      const experienciaApps = getValue("experienciaAppsReparto");
+      const experienciaCadete = getValue("experienciaCadete");
+      const disponibilidadOperativa = getValue("disponibilidadOperativa");
+      const disponibilidadEmpresaria = getValue("disponibilidadEmpresaria");
+
+      appsRepartoCualesGroup.style.display = experienciaApps === "si" ? "block" : "none";
+      ultimaEmpresaGroup.style.display = experienciaCadete && experienciaCadete !== "sin_experiencia" ? "block" : "none";
+      diasOperativosGroup.style.display = disponibilidadOperativa === "dias_especificos" ? "block" : "none";
+      diasEmpresariosGroup.style.display = disponibilidadEmpresaria === "dias_especificos" ? "block" : "none";
+
+      if (experienciaApps !== "si") {
+        getField("appsRepartoCuales").value = "";
+      }
+
+      if (!experienciaCadete || experienciaCadete === "sin_experiencia") {
+        getField("ultimaEmpresa").value = "";
+      }
+
+      if (disponibilidadOperativa !== "dias_especificos") {
+        form.querySelectorAll('input[name="disponibilidadOperativaDias"]').forEach((field) => {
+          field.checked = false;
+        });
+      }
+
+      if (disponibilidadEmpresaria !== "dias_especificos") {
+        form.querySelectorAll('input[name="disponibilidadEmpresariaDias"]').forEach((field) => {
+          field.checked = false;
+        });
+      }
+    }
+
+    function getPerfil() {
+      return getValue("perfil");
+    }
+
+    function buildDisponibilidad(selectName, daysName) {
+      const disponibilidad = getValue(selectName);
+      if (disponibilidad !== "dias_especificos") {
+        return disponibilidad;
+      }
+
+      const dias = getCheckedValues(daysName);
+      return dias.length ? `dias_especificos:${dias.join(",")}` : "dias_especificos";
+    }
+
+    function getDisponibilidad() {
+      const perfil = getPerfil();
+      if (perfil === "empresario") {
+        return buildDisponibilidad("disponibilidadEmpresaria", "disponibilidadEmpresariaDias");
+      }
+      return buildDisponibilidad("disponibilidadOperativa", "disponibilidadOperativaDias");
+    }
+
+    function getObservaciones() {
+      const perfil = getPerfil();
+      if (perfil === "empresario") {
+        return getValue("observacionesEmpresarias");
+      }
+      return getValue("observacionesOperativas");
+    }
+
+    function setSubmittingState(isSubmitting) {
+      [btnEnviarOperativa, btnEnviarEmpresaria].forEach((button) => {
+        if (!button) return;
+        button.disabled = isSubmitting;
+        button.textContent = isSubmitting ? "Enviando..." : "Enviar solicitud";
+      });
+    }
+
+    function resetFormState() {
+      form.reset();
+      clearFieldErrors();
+      syncRadioVisuals();
+      updateConditionalFields();
+      successSubmissionId.textContent = "";
+      successSubmissionId.style.display = "none";
+      tituloOperativo.textContent = "Datos del perfil operativo";
+      showSection("base");
+    }
+
+    function buildPayload() {
+      const perfil = getPerfil();
+      const esEmpresario = perfil === "empresario";
+      const consentimientoDatos = getValue("consentimientoDatos") ? "si" : "no";
+      const nombreEmpresa = esEmpresario ? getValue("nombreEmpresaInput") : "";
+      const tipoEmpresa = esEmpresario ? getValue("tipoEmpresa") : "";
+      const modalidadOperativa = esEmpresario ? getValue("modalidadOperativa") : "";
+      const detalleEmpresa = esEmpresario ? getValue("detalleEmpresa") : "";
+      const experienciaCadete = esEmpresario ? "" : getValue("experienciaCadete");
+      const experienciaAppsReparto = esEmpresario ? "" : getValue("experienciaAppsReparto");
+      const appsRepartoCuales = esEmpresario ? "" : getValue("appsRepartoCuales");
+      const ultimaEmpresa = esEmpresario ? "" : getValue("ultimaEmpresa");
+      const detalleExperiencia = esEmpresario ? "" : getValue("detalleExperiencia");
+
+      const payload = {
+        nombre: getValue("nombre"),
+        cedula: getValue("cedula"),
+        edad: getValue("edad"),
+        telefono: getValue("telefono"),
+        email: getValue("email"),
+        tipoPostulante: perfil,
+        tieneEmpresa: esEmpresario ? "si" : "no",
+        nombreEmpresa: nombreEmpresa,
+        tipoEmpresa: tipoEmpresa,
+        vehiculo: getValue("vehiculo"),
+        condicionesVehiculo: getValue("estadoVehiculo"),
+        detalleCondicionesVehiculo: getValue("detalleCondicionesVehiculo"),
+        experienciaCadete: experienciaCadete,
+        experienciaAppsReparto: experienciaAppsReparto,
+        appsRepartoCuales: appsRepartoCuales,
+        ultimaEmpresa: ultimaEmpresa,
+        detalleExperiencia: detalleExperiencia,
+        modalidadOperativa: modalidadOperativa,
+        detalleEmpresa: detalleEmpresa,
+        zona: getValue("barrio"),
+        disponibilidad: getDisponibilidad(),
+        observaciones: getObservaciones(),
+        fuente: "web",
+        consentimientoDatos: consentimientoDatos
+      };
+
+      return payload;
+    }
+
+    function validateBaseStep() {
+      return validateRequired(
+        [
+          "nombre",
+          "cedula",
+          "edad",
+          "telefono",
+          "email",
+          "perfil",
+          "barrio",
+          "vehiculo",
+          "estadoVehiculo",
+          "consentimientoDatos"
+        ],
+        "Por favor completá todos los datos base obligatorios."
+      );
+    }
+
+    function validateProfileStep() {
+      const perfil = getPerfil();
+
+      if (perfil === "empresario") {
+        const esValidoEmpresario = validateRequired(
+          [
+            "nombreEmpresaInput",
+            "tipoEmpresa",
+            "modalidadOperativa",
+            "detalleEmpresa",
+            "disponibilidadEmpresaria"
+          ],
+          "Por favor completá todos los campos obligatorios del perfil empresario."
+        );
+
+        if (!esValidoEmpresario) {
+          return false;
+        }
+
+        if (getValue("disponibilidadEmpresaria") === "dias_especificos" && !getCheckedValues("disponibilidadEmpresariaDias").length) {
+          pushFormEvent("error_form_repartidores", {
+            error_type: "validation",
+            error_field: "disponibilidadEmpresariaDias"
+          });
+          alert("Por favor seleccioná al menos un día para la disponibilidad empresaria.");
+          return false;
+        }
+
+        return true;
+      }
+
+      const esValidoOperativo = validateRequired(
+        [
+          "experienciaCadete",
+          "experienciaAppsReparto",
+          "detalleExperiencia",
+          "disponibilidadOperativa"
+        ],
+        "Por favor completá todos los campos obligatorios del perfil operativo."
+      );
+
+      if (!esValidoOperativo) {
+        return false;
+      }
+
+      if (getValue("experienciaAppsReparto") === "si" && !getValue("appsRepartoCuales")) {
+        clearFieldErrors();
+        pushFormEvent("error_form_repartidores", {
+          error_type: "validation",
+          error_field: "appsRepartoCuales"
+        });
+        alert("Por favor indicá qué apps o sistemas de reparto usaste.");
+        markFieldError("appsRepartoCuales");
+        return false;
+      }
+
+      if (getValue("disponibilidadOperativa") === "dias_especificos" && !getCheckedValues("disponibilidadOperativaDias").length) {
+        pushFormEvent("error_form_repartidores", {
+          error_type: "validation",
+          error_field: "disponibilidadOperativaDias"
+        });
+        alert("Por favor seleccioná al menos un día para la disponibilidad operativa.");
+        return false;
+      }
+
+      return true;
+    }
+
+    async function submitForm(event) {
+      event.preventDefault();
+
+      if (!validateProfileStep()) {
+        return;
+      }
+
+      const payload = buildPayload();
+      setSubmittingState(true);
+
+      try {
+        const response = await fetch(scriptURL, {
+          method: "POST",
+          headers: {
+            "Content-Type": "text/plain;charset=utf-8"
+          },
+          body: JSON.stringify(payload)
+        });
+
+        const data = await response.json().catch(() => {
+          throw new Error("Respuesta invalida del servidor.");
+        });
+
+        if (!response.ok || !data.success) {
+          throw new Error(data && data.error ? data.error : "No se pudo registrar la postulación.");
+        }
+
+        pushFormEvent("submit_form_repartidores", {
+          submission_id: data.submissionId || ""
+        });
+
+        const submissionId = data.submissionId || "";
+        if (submissionId) {
+          successSubmissionId.textContent = `Número de solicitud: ${submissionId}`;
+          successSubmissionId.style.display = "block";
+        } else {
+          successSubmissionId.textContent = "";
+          successSubmissionId.style.display = "none";
+        }
+
+        form.reset();
+        syncRadioVisuals();
+        updateConditionalFields();
+        showSection("exito");
+      } catch (error) {
+        console.error("Error al enviar el formulario:", error);
+        pushFormEvent("error_form_repartidores", {
+          error_type: "submit",
+          error_message: error && error.message ? error.message : "unknown_error"
+        });
+        alert(error && error.message ? error.message : "Hubo un error al enviar el formulario. Intentá nuevamente.");
+      } finally {
+        setSubmittingState(false);
+      }
+    }
+
+    btnSiguienteBase.addEventListener("click", () => {
+      if (!validateBaseStep()) {
+        return;
+      }
+
+      const perfil = getPerfil();
+      if (perfil === "empresario") {
+        showSection("empresaria");
+        return;
+      }
+
+      tituloOperativo.textContent = perfil === "independiente"
+        ? "Datos del perfil independiente"
+        : "Datos del perfil empleado";
+      showSection("operativa");
+    });
+
+    btnVolverOperativa.addEventListener("click", () => showSection("base"));
+    btnVolverEmpresaria.addEventListener("click", () => showSection("base"));
+    btnNuevaSolicitud.addEventListener("click", resetFormState);
+
+    form.addEventListener("change", (event) => {
+      syncRadioVisuals();
+
+      if (
+        event.target.name === "experienciaAppsReparto" ||
+        event.target.name === "experienciaCadete" ||
+        event.target.name === "disponibilidadOperativa" ||
+        event.target.name === "disponibilidadEmpresaria"
+      ) {
+        updateConditionalFields();
+      }
+    });
+
+    form.addEventListener("submit", submitForm);
+
+    syncRadioVisuals();
+    updateConditionalFields();
+  </script>
+</body>
+</html>
