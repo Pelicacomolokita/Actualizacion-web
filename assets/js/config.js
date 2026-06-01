@@ -6,7 +6,7 @@
 window.APP_CONFIG = {
   WHATSAPP_PHONE: "59897428015",
   PRECIOS_LINK: "precios-y-zonas.html",
-  PDF_LINK: "https://drive.google.com/file/d/1H1xJMBVA5rtAZ0K258bq-1R2aBSrx-w-/view?usp=sharing",
+  PDF_LINK: "https://drive.google.com/file/d/1nEJflul55PQeRFISi0DvpVHT4bRtElPr/view?usp=sharing",
 
   MESSAGES: {
     INDEX_NAV: "Hola! Vi su web y me interesa coordinar envios para mi tienda. Podemos hablar?",
