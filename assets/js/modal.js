@@ -15,11 +15,12 @@ const MODALS = {
         <li>Retiro y entrega del paquete dentro del área operativa</li>
         <li>Gestión completa del recorrido</li>
       </ul>
-      <p><strong>Medidas máximas:</strong></p>
+      <p><strong>Medidas máximas (sin recargo de tamaño):</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Hasta 40 × 40 × 20 cm</li>
+        <li>Hasta 30 × 30 × 15 cm</li>
         <li>Hasta 3 kg</li>
       </ul>
+      <p class="text-sm text-neutral-600">Paquetes que superen estas medidas tienen recargo según categoría. Ver tamaño del paquete.</p>
       <p><strong>Protocolo de entrega:</strong></p>
       <ul class="list-disc pl-5 space-y-2">
         <li>Tocar timbre</li>
@@ -144,14 +145,14 @@ const MODALS = {
   "modal-paquete": {
     title: "Paquete extra — Condiciones",
     body: `
-      <p><strong>Se considera paquete extra cuando:</strong></p>
+      <p><strong>Para 2 paquetes a la misma dirección:</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Se envían dos paquetes o más a una misma dirección en diferentes bultos</li>
-        <li>El total supera 40 × 40 × 20 cm</li>
+        <li>Se evalúan como una unidad según tamaño y peso combinados</li>
+        <li>El recargo que aplica (si aplica) depende de la categoría de tamaño que corresponda</li>
       </ul>
-      <p><strong>No se considera extra si:</strong></p>
+      <p><strong>Desde el tercer paquete:</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Son dos paquetes pequeños dentro del límite total</li>
+        <li>Se cobra 1 Paquete Extra (+$50) por cada paquete adicional</li>
       </ul>
       <p><strong>Importante:</strong> si los paquetes van a distintas direcciones → son envíos separados.</p>
     `,
@@ -161,14 +162,29 @@ const MODALS = {
     ]
   },
   "modal-tamano": {
-    title: "Tamaño extra — Condiciones",
+    title: "Tamaño del paquete — Categorías y precios",
     body: `
-      <p><strong>Se considera tamaño extra cuando:</strong></p>
+      <p><strong>Tamaño base (incluido sin recargo):</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Un paquete supera 40 × 40 × 20 cm hasta 50 × 50 × 50</li>
-        <li>El peso total supera 3 kg hasta 7 kg</li>
+        <li>Hasta 30 × 30 × 15 cm y hasta 3 kg</li>
       </ul>
-      <p><strong>Importante:</strong> si supera estas dimensiones/peso, se debe consultar disponibilidad y ajuste de precio.</p>
+      <p><strong>Paquete Mediano (+$20):</strong></p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Hasta 40 × 40 × 20 cm y hasta 3 kg</li>
+      </ul>
+      <p><strong>Paquete Grande (+$50):</strong></p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Mayor a 40 × 40 × 20 cm o mayor a 3 kg, hasta 5 kg</li>
+      </ul>
+      <p><strong>Paquete Grande + Peso (+$70):</strong></p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Mayor a 40 × 40 × 20 cm y mayor a 5 kg</li>
+      </ul>
+      <p><strong>Paquete Grande Extra (+$100):</strong></p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>Mayor a 60 × 60 × 40 cm o mayor a 7 kg</li>
+      </ul>
+      <p class="text-sm text-neutral-600"><strong>Importante:</strong> el paquete cae en la categoría más alta que aplique. Paquetes grandes o pesados deben notificarse previamente.</p>
     `,
     ctas: [
       { type: "precios", label: "Ver precios" },
@@ -217,15 +233,20 @@ const MODALS = {
   "modal-retiro-mercaderia": {
     title: "Retiro de mercadería — Condiciones",
     body: `
+      <p><strong>Aplica cuando:</strong></p>
+      <ul class="list-disc pl-5 space-y-2">
+        <li>El retiro es en locales comerciales, mayoristas, agencias o proveedores donde el cadete debe gestionar el retiro, esperar atención o hacer fila</li>
+      </ul>
       <p><strong>Incluye:</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Hasta 10 minutos de espera para retiro</li>
+        <li>Hasta 10 minutos de espera</li>
       </ul>
-      <p><strong>Si la espera supera los 15 minutos:</strong></p>
+      <p><strong>Demora en retiro (+$20):</strong></p>
       <ul class="list-disc pl-5 space-y-2">
-        <li>Se aplica recargo adicional</li>
+        <li>Si la espera supera los 10 minutos, se aplica el extra de Demora en Retiro</li>
+        <li>Es un cargo independiente del servicio de retiro de mercadería</li>
       </ul>
-      <p><strong>Responsabilidad del cliente:</strong> confirmar que la mercadería esté lista antes del retiro.</p>
+      <p><strong>Responsabilidad del cliente:</strong> confirmar que la mercadería esté lista antes del retiro y brindar datos completos del punto de retiro, horarios y referencias.</p>
     `,
     ctas: [
       { type: "wpp", label: "Hablar con coordinación", message: "RETIRO_MERCADERIA" }
